@@ -63,9 +63,9 @@ class ModeloActivos{
 	static public function mdlIngresarActivo($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (`id_categoria`, `codigo`, `codigo_uf`, `descripcion`, `fecha_adquisicion`, `fuente_financiamiento`, 
-    `origen_activo`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`, 
+    `origen_activo`, `tipo_origen`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`, 
     `info_garantia`, `observaciones`, `imagen`, `stock`, `precio_compra_bs`, `precio_compra_ds`) 
-    VALUES (:id_categoria, :codigo, :codigo_uf, :descripcion, :fecha_adquisicion, :fuente_financiamiento, :origen_activo,
+    VALUES (:id_categoria, :codigo, :codigo_uf, :descripcion, :fecha_adquisicion, :fuente_financiamiento, :origen_activo, :tipo_origen,
     :situacion_contable, :ubicacion_fisica, :responsable, :fecha_entrega_res, :estado_conservacion, :info_garantia,
     :observaciones, :imagen, :stock, :precio_compra_bs, :precio_compra_ds)");
 
@@ -76,6 +76,7 @@ class ModeloActivos{
 		$stmt->bindParam(":fecha_adquisicion", $datos["fecha_adquisicion"], PDO::PARAM_STR);
 		$stmt->bindParam(":fuente_financiamiento", $datos["fuente_financiamiento"], PDO::PARAM_STR);
 		$stmt->bindParam(":origen_activo", $datos["origen_activo"], PDO::PARAM_STR);
+		$stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
 		$stmt->bindParam(":situacion_contable", $datos["situacion_contable"], PDO::PARAM_STR);
 		$stmt->bindParam(":ubicacion_fisica", $datos["ubicacion_fisica"], PDO::PARAM_STR);
 		$stmt->bindParam(":responsable", $datos["responsable"], PDO::PARAM_STR);
@@ -108,7 +109,7 @@ class ModeloActivos{
 	=============================================*/
 	static public function mdlEditarActivo($tabla, $datos){
  
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, codigo_uf = :codigo_uf, descripcion = :descripcion, fecha_adquisicion = :fecha_adquisicion, fuente_financiamiento = :fuente_financiamiento, origen_activo = :origen_activo, situacion_contable = :situacion_contable, ubicacion_fisica = :ubicacion_fisica, responsable = :responsable, fecha_entrega_res = :fecha_entrega_res, estado_conservacion = :estado_conservacion, info_garantia = :info_garantia, observaciones = :observaciones, imagen = :imagen, stock = :stock, precio_compra_bs = :precio_compra_bs, precio_compra_ds = :precio_compra_ds WHERE codigo = :codigo");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, codigo_uf = :codigo_uf, descripcion = :descripcion, fecha_adquisicion = :fecha_adquisicion, fuente_financiamiento = :fuente_financiamiento, origen_activo = :origen_activo, tipo_origen = :tipo_origen, situacion_contable = :situacion_contable, ubicacion_fisica = :ubicacion_fisica, responsable = :responsable, fecha_entrega_res = :fecha_entrega_res, estado_conservacion = :estado_conservacion, info_garantia = :info_garantia, observaciones = :observaciones, imagen = :imagen, stock = :stock, precio_compra_bs = :precio_compra_bs, precio_compra_ds = :precio_compra_ds WHERE codigo = :codigo");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo_uf", $datos["codigo_uf"], PDO::PARAM_STR);
@@ -117,6 +118,7 @@ class ModeloActivos{
 		$stmt->bindParam(":fecha_adquisicion", $datos["fecha_adquisicion"], PDO::PARAM_STR);
 		$stmt->bindParam(":fuente_financiamiento", $datos["fuente_financiamiento"], PDO::PARAM_STR);
 		$stmt->bindParam(":origen_activo", $datos["origen_activo"], PDO::PARAM_STR);
+		$stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
 		$stmt->bindParam(":situacion_contable", $datos["situacion_contable"], PDO::PARAM_STR);
 		$stmt->bindParam(":ubicacion_fisica", $datos["ubicacion_fisica"], PDO::PARAM_STR);
 		$stmt->bindParam(":responsable", $datos["responsable"], PDO::PARAM_STR);
@@ -212,6 +214,23 @@ class ModeloActivos{
 		$stmt -> close();
 
 		$stmt = null;
+	}
+
+	/*=============================================
+	CONTAR ACTIVOS POR UBICACION FISICA
+	=============================================*/
+	static public function mdlContarPorUbicacion($tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT ubicacion_fisica, COUNT(*) as total FROM $tabla GROUP BY ubicacion_fisica HAVING total>0");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+		$stmt -> close();
+
+		$stmt = null;
+
 	}
 
 

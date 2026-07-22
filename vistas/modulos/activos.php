@@ -68,11 +68,12 @@ if($_SESSION["perfil"] == "Especial"){
            <th style="width:10px">#</th>
            <th>Imagen</th>
            <th>Código</th>
-           <th>Descripción</th>
            <th>Categoría</th>
+           <th>Descripción</th>
            <th>Origen</th>
            <th>Situación contable</th>
            <th>Responsable</th>
+           <th>Estado/Oficina</th>
            <th>Stock</th>
            <th>Precio de compra Bs</th>
            <th>Precio de compra $</th>
@@ -308,7 +309,21 @@ MODAL AGREGAR ACTIVO
 
               </div>
 
-            </div> 
+            </div>
+
+            <!-- ENTRADA PARA TIPO DE ORIGEN -->
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-pencil"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevoTipoOrigen" placeholder="Ingresar tipo de origen">
+
+              </div>
+
+            </div>
             <!-- ENTRADA PARA SELECCIONAR SITUACION CONTABLE -->
 
             <div class="form-group">
@@ -736,7 +751,21 @@ MODAL EDITAR ACTIVO
 
               </div>
 
-            </div> 
+            </div>
+
+            <!-- ENTRADA PARA TIPO DE ORIGEN -->
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-pencil"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="editarTipoOrigen" id="editarTipoOrigen" placeholder="Ingresar tipo de origen">
+
+              </div>
+
+            </div>
             <!-- ENTRADA PARA SELECCIONAR SITUACION CONTABLE -->
 
             <div class="form-group">

@@ -17,6 +17,19 @@ class ControladorActivos{
 	}
 
 	/*=============================================
+	CONTAR ACTIVOS POR UBICACION FISICA
+	=============================================*/
+	static public function ctrContarPorUbicacion(){
+
+		$tabla = "activos";
+
+		$respuesta = ModeloActivos::mdlContarPorUbicacion($tabla);
+
+		return $respuesta;
+
+	}
+
+	/*=============================================
 	CREAR Activo
 	=============================================*/
 
@@ -38,68 +51,70 @@ class ControladorActivos{
 
 			   	$ruta = "vistas/img/activos/default/anonymous.png";
 
-// 			   	if(isset($_FILES["nuevaImagen"]["tmp_name"])){
+			    	if(isset($_FILES["nuevaImagen"]["tmp_name"]) && !empty($_FILES["nuevaImagen"]["tmp_name"])){
 
-// 					list($ancho, $alto) = getimagesize($_FILES["nuevaImagen"]["tmp_name"]);
+				list($ancho, $alto) = getimagesize($_FILES["nuevaImagen"]["tmp_name"]);
 
-// 					$nuevoAncho = 500;
-// 					$nuevoAlto = 500;
+				$nuevoAncho = 500;
+				$nuevoAlto = 500;
 
-// 					/*=============================================
-// 					CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
-// 					=============================================*/
+				/*=============================================
+				CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL ACTIVO
+				============================================*/
 
-// 					$directorio = "vistas/img/activos/".$_POST["nuevoCodigo"];
+				$directorio = "vistas/img/activos/".$_POST["nuevoCodigo"];
 
-//           mkdir($directorio, 0777, true);
+				if(!file_exists($directorio)){
+					mkdir($directorio, 0777, true);
+				}
 
-// 					/*=============================================
-// 					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
-// 					=============================================*/
+				/*=============================================
+				DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+				============================================*/
 
-// 					if($_FILES["nuevaImagen"]["type"] == "image/jpeg"){
+				if($_FILES["nuevaImagen"]["type"] == "image/jpeg"){
 
-// 						/*=============================================
-// 						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-// 						=============================================*/
+					/*=============================================
+					GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+					============================================*/
 
-// 						$aleatorio = mt_rand(100,999);
+					$aleatorio = mt_rand(100,999);
 
-// 						$ruta = "vistas/img/activos/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+					$ruta = "vistas/img/activos/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
 
-// 						$origen = imagecreatefromjpeg($_FILES["nuevaImagen"]["tmp_name"]);						
+					$origen = imagecreatefromjpeg($_FILES["nuevaImagen"]["tmp_name"]);
 
-// 						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+					$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 
-// 						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+					imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
 
-// 						imagejpeg($destino, $ruta);
+					imagejpeg($destino, $ruta);
 
-// 					}
+				}
 
-// 					if($_FILES["nuevaImagen"]["type"] == "image/png"){
+				if($_FILES["nuevaImagen"]["type"] == "image/png"){
 
-// 						/*=============================================
-// 						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
-// 						=============================================*/
+					/*=============================================
+					GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+					============================================*/
 
-// 						$aleatorio = mt_rand(100,999);
+					$aleatorio = mt_rand(100,999);
 
-// 						$ruta = "vistas/img/activos/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+					$ruta = "vistas/img/activos/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
 
-// 						$origen = imagecreatefrompng($_FILES["nuevaImagen"]["tmp_name"]);						
+					$origen = imagecreatefrompng($_FILES["nuevaImagen"]["tmp_name"]);
 
-// 						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+					$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
 
-// 						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+					imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
 
-// 						imagepng($destino, $ruta);
+					imagepng($destino, $ruta);
 
-// 					}
+				}
 
-// 				}
+			}
 
-				$tabla = "activos";
+			$tabla = "activos";
                 
         $nuevaDescripcion = strtoupper($_POST["nuevaDescripcion"]);         
 
@@ -111,23 +126,23 @@ class ControladorActivos{
 							   "fecha_adquisicion" => $_POST["nuevaFechaAdquisicion"],
 							   "fuente_financiamiento" => $_POST["nuevaFuenteFinanciamiento"],
 							   "origen_activo" => $_POST["nuevoOrigen"],
-							   "situacion_contable" => $_POST["nuevoSituacionContable"],
-							   "responsable" => $_POST["nuevoResponsable"],
-							   "fecha_entrega_res" => $_POST["nuevaFechaEntregaResponsable"],
-							   "estado_conservacion" => $_POST["nuevoEstadoConservacion"],
-							   "info_garantia" => $_POST["nuevaGarantia"],
-							   "observaciones" => $_POST["nuevaObservaciones"],                     
-                 "stock" => $_POST["nuevoStock"],
-							   "precio_compra_bs" => $_POST["nuevoPrecioCompraBs"],
-							   "precio_compra_ds" => $_POST["nuevoPrecioCompraDs"],
-							   "imagen" => $ruta);
+					   "tipo_origen" => $_POST["nuevoTipoOrigen"],
+					   "situacion_contable" => $_POST["nuevoSituacionContable"],
+					   "responsable" => $_POST["nuevoResponsable"],
+					   "fecha_entrega_res" => $_POST["nuevaFechaEntregaResponsable"],
+					   "estado_conservacion" => $_POST["nuevoEstadoConservacion"],
+					   "info_garantia" => $_POST["nuevaGarantia"],
+					   "observaciones" => $_POST["nuevaObservaciones"],                     
+					   "stock" => $_POST["nuevoStock"],
+					   "precio_compra_bs" => $_POST["nuevoPrecioCompraBs"],
+					   "precio_compra_ds" => $_POST["nuevoPrecioCompraDs"],
+					   "imagen" => $ruta);
 
 				$respuesta = ModeloActivos::mdlIngresarActivo($tabla, $datos);
 
 
 				if($respuesta == "ok"){
-          
-        /*=============================================
+          /*=============================================
         AUDITORIA
         =============================================*/
   //       $tablaAuditoria = "usuarios";
@@ -144,14 +159,6 @@ class ControladorActivos{
         =============================================*/ 
 
 					echo'<script>
-
-						swal({
-							  type: "success",
-							  title: "El Activo ha sido guardado correctamente",
-							  showConfirmButton: true,
-							  confirmButtonText: "Cerrar"
-							  }).then(function(result){
-										if (result.value) {
 
 										window.location = "activos";
 
@@ -317,13 +324,7 @@ class ControladorActivos{
 							   "fecha_adquisicion" => $_POST["editarFechaAdquisicion"],
 							   "fuente_financiamiento" => $_POST["editarFuenteFinanciamiento"],
 							   "origen_activo" => $_POST["editarOrigen"],
-							   "situacion_contable" => $_POST["editarSituacionContable"],
-							   "ubicacion_fisica" => $_POST["editarUbicacionFisica"],
-							   "responsable" => $_POST["editarResponsable"],
-							   "fecha_entrega_res" => $_POST["editarFechaEntregaResponsable"],
-							   "estado_conservacion" => $_POST["editarEstadoConservacion"],
-							   "info_garantia" => $_POST["editarGarantia"],
-							   "observaciones" => $_POST["editarObservaciones"],                     
+					   "tipo_origen" => $_POST["editarTipoOrigen"],
                                "stock" => $_POST["editarStock"],
 							   "precio_compra_bs" => $_POST["editarPrecioCompraBs"],
 							   "precio_compra_ds" => $_POST["editarPrecioCompraDs"],

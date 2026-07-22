@@ -30,98 +30,63 @@ class TablaActivos{
 
 		  	return;
   		}
-		
-  		$datosJson = '{
-		  "data": [';
 
-		  for($i = 0; $i < count($activos); $i++){
+		$datos = array();
 
-		  	/*=============================================
- 	 		TRAEMOS LA IMAGEN
-  			=============================================*/ 
+		for($i = 0; $i < count($activos); $i++){
 
-		  	$imagen = "<img src='".$activos[$i]["imagen"]."' width='40px'>";
+			// Imagen
+			$imagen = "<img src='".$activos[$i]["imagen"]."' width='40px'>";
 
-		  	/*=============================================
- 	 		TRAEMOS LA CATEGORÍA
-  			=============================================*/ 
+			// Categoria
+			$item = "id";
+			$valor = $activos[$i]["id_categoria"];
+			$categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
 
-		  	$item = "id";
-		  	$valor = $activos[$i]["id_categoria"];
+			// Responsable
+			$itemResp = "id";
+			$valorResp = $activos[$i]["responsable"];
+			$responsables = ControladorEmpleados::ctrMostrarEmpleados($itemResp, $valorResp);
 
-		  	$categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-        /*=============================================
- 	 		TRAEMOS LA RESPONSABLE
-  			=============================================*/ 
+			// Stock
+			if($activos[$i]["stock"] <= 10){
+				$stock = "<button class='btn btn-danger'>".$activos[$i]["stock"]."</button>";
+			}else if($activos[$i]["stock"] > 11 && $activos[$i]["stock"] <= 15){
+				$stock = "<button class='btn btn-warning'>".$activos[$i]["stock"]."</button>";
+			}else{
+				$stock = "<button class='btn btn-success'>".$activos[$i]["stock"]."</button>";
+			}
 
-		  	$itemResp = "id";
-		  	$valorResp = $activos[$i]["responsable"];
+			// Botones
+			$botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarActivo' idActivo='".$activos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarActivo'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarActivo' idActivo='".$activos[$i]["id"]."' codigo='".$activos[$i]["codigo"]."' imagen='".$activos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>";
 
-		  	 $responsables = ControladorEmpleados::ctrMostrarEmpleados($itemResp, $valorResp);
+			$codigo = $activos[$i]["codigo_uf"]."-".$activos[$i]["codigo"];
 
-		  	/*=============================================
- 	 		STOCK
-  			=============================================*/ 
+			$precio_compra_bs = number_format($activos[$i]["precio_compra_bs"], 2, ',', '.');
+			$precio_compra_ds = $activos[$i]["precio_compra_ds"];
+			$precio_compra_bs = "Bs. ".$precio_compra_bs;
 
-  			if($activos[$i]["stock"] <= 10){
+			$datos[] = array(
+				($i+1),
+				$imagen,
+				$codigo,
+				isset($categorias["categoria"]) ? $categorias["categoria"] : '',
+				$activos[$i]["descripcion"],
+				$activos[$i]["origen_activo"],
+				$activos[$i]["situacion_contable"],
+				isset($responsables["nombre"]) ? $responsables["nombre"] : '',
+				$activos[$i]["ubicacion_fisica"],
+				$stock,
+				$precio_compra_bs,
+				$precio_compra_ds,
+				$activos[$i]["fecha_adquisicion"],
+				$activos[$i]["observaciones"],
+				$botones
+			);
 
-  				$stock = "<button class='btn btn-danger'>".$activos[$i]["stock"]."</button>";
+		}
 
-  			}else if($activos[$i]["stock"] > 11 && $activos[$i]["stock"] <= 15){
-
-  				$stock = "<button class='btn btn-warning'>".$activos[$i]["stock"]."</button>";
-
-  			}else{
-
-  				$stock = "<button class='btn btn-success'>".$activos[$i]["stock"]."</button>";
-
-  			}
-
-		  	/*=============================================
- 	 		TRAEMOS LAS ACCIONES
-  			=============================================*/ 
-
-		  	$botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarActivo' idActivo='".$activos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarActivo'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarActivo' idActivo='".$activos[$i]["id"]."' codigo='".$activos[$i]["codigo"]."' imagen='".$activos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>"; 
-//         		  	$botones =  "<div class='btn-group'>
-//                 <button class='btn btn-warning btnEditarActivo' idActivo='".$activos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarActivo'><i class='fa fa-pencil'></i></button></div>"; 
-
-		  	$codigo = $activos[$i]["codigo_uf"]."-".$activos[$i]["codigo"];
-
-		  	$precio_compra_bs = number_format($activos[$i]["precio_compra_bs"], 2, ',', '.');
-        
-        setlocale(LC_MONETARY, 'en_US');
-
-		  	$precio_compra_ds = $activos[$i]["precio_compra_ds"];
-// 		  	$precio_compra_ds = money_format('%n', $activos[$i]["precio_compra_ds"]);
-
-		  	$precio_compra_bs = "Bs. ".$precio_compra_bs;
-
-		  	$datosJson .='[
-			      "'.($i+1).'",
-			      "'.$imagen.'",
-			      "'.$codigo.'",
-			      "'.$activos[$i]["descripcion"].'",
-			      "'.$categorias["categoria"].'",
-			      "'.$activos[$i]["origen_activo"].'",
-			      "'.$activos[$i]["situacion_contable"].'",
-			      "'.$responsables["nombre"].'",
-			      "'.$stock.'",
-			      "'.$precio_compra_bs.'",
-			      "'.$precio_compra_ds.'",
-			      "'.$activos[$i]["fecha_adquisicion"].'",
-			      "'.$activos[$i]["observaciones"].'",
-			      "'.$botones.'"
-			    ],';
-
-		  }
-
-		  $datosJson = substr($datosJson, 0, -1);
-
-		 $datosJson .=   '] 
-
-		 }';
-		
-		echo $datosJson;
+		echo json_encode(array("data" => $datos));
 
 
 	}
