@@ -1,0 +1,1058 @@
+[14-Jun-2020 14:36:26 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/asonacop/public_html/system/modelos/conexion.php:9
+Stack trace:
+#0 /home/asonacop/public_html/system/modelos/conexion.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/asonacop/public_html/system/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/asonacop/public_html/system/controladores/usuarios.controlador.php(22): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'peraza@outlook....')
+#3 /home/asonacop/public_html/system/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/asonacop/public_html/system/vistas/plantilla.php(128): include('/home/asonacop/...')
+#5 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#6 /home/asonacop/public_html/system/index.php(15): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/asonacop/public_html/system/modelos/conexion.php on line 9
+[14-Jun-2020 14:44:40 America/New_York] PHP Notice:  Undefined variable: encriptar in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 378
+[14-Jun-2020 14:45:00 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 291
+[15-Jun-2020 10:21:02 America/New_York] PHP Warning:  unlink(vistas/img/usuarios/admin/191.jpg): No such file or directory in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 443
+[15-Jun-2020 10:21:43 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 116
+[16-Jul-2020 00:03:53 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/asonacop/public_html/system/modelos/conexion.php:35
+Stack trace:
+#0 /home/asonacop/public_html/system/modelos/conexion.php(35): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/asonacop/public_html/system/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/asonacop/public_html/system/controladores/usuarios.controlador.php(23): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'jaiker11@hotmai...')
+#3 /home/asonacop/public_html/system/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/asonacop/public_html/system/vistas/plantilla.php(164): include('/home/asonacop/...')
+#5 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#6 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/asonacop/public_html/system/modelos/conexion.php on line 35
+[16-Jul-2020 00:03:57 America/New_York] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/asonacop/public_html/system/modelos/conexion.php:35
+Stack trace:
+#0 /home/asonacop/public_html/system/modelos/conexion.php(35): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/asonacop/public_html/system/modelos/usuarios.modelo.php(15): Conexion::conectar()
+#2 /home/asonacop/public_html/system/controladores/usuarios.controlador.php(23): ModeloUsuarios::mdlMostrarUsuarios('usuarios', 'usuario', 'peraza@outlook....')
+#3 /home/asonacop/public_html/system/vistas/modulos/login.php(42): ControladorUsuarios::ctrIngresoUsuario()
+#4 /home/asonacop/public_html/system/vistas/plantilla.php(164): include('/home/asonacop/...')
+#5 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#6 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#7 {main}
+  thrown in /home/asonacop/public_html/system/modelos/conexion.php on line 35
+[16-Jul-2020 00:18:52 America/New_York] PHP Notice:  Undefined index: empleado in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 378
+[16-Jul-2020 00:18:52 America/New_York] PHP Warning:  rmdir(vistas/img/Empleados/): No such file or directory in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 378
+[16-Jul-2020 00:19:31 America/New_York] PHP Warning:  rmdir(vistas/img/usuarios/zenenperaza@gmail.com): Directory not empty in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 456
+[16-Jul-2020 11:16:57 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 41
+[16-Jul-2020 11:17:29 America/New_York] PHP Warning:  rmdir(vistas/img/activos/201): Directory not empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 349
+[17-Jul-2020 11:42:41 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 44
+[17-Jul-2020 11:53:38 America/New_York] PHP Warning:  unlink(vistas/img/Activos/default/anonymous.png): No such file or directory in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 354
+[17-Jul-2020 11:53:38 America/New_York] PHP Warning:  rmdir(vistas/img/activos/BOL - 101): No such file or directory in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 355
+[17-Jul-2020 11:55:46 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 44
+[17-Jul-2020 11:55:46 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 55
+[17-Jul-2020 11:58:29 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 44
+[17-Jul-2020 11:58:29 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 55
+[17-Jul-2020 12:21:49 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 110
+[17-Jul-2020 12:26:30 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 55
+[03-Aug-2020 03:43:00 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorParticipantes' not found in /home/asonacop/public_html/system/vistas/modulos/inicio.php:113
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/plantilla.php(176): include()
+#1 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#3 {main}
+  thrown in /home/asonacop/public_html/system/vistas/modulos/inicio.php on line 113
+[03-Aug-2020 03:43:04 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorParticipantes' not found in /home/asonacop/public_html/system/vistas/modulos/inicio.php:113
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/plantilla.php(176): include()
+#1 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#3 {main}
+  thrown in /home/asonacop/public_html/system/vistas/modulos/inicio.php on line 113
+[03-Aug-2020 03:43:50 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorParticipantes' not found in /home/asonacop/public_html/system/vistas/modulos/inicio.php:113
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/plantilla.php(176): include()
+#1 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#3 {main}
+  thrown in /home/asonacop/public_html/system/vistas/modulos/inicio.php on line 113
+[03-Aug-2020 03:43:55 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorParticipantes' not found in /home/asonacop/public_html/system/vistas/modulos/inicio.php:113
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/plantilla.php(176): include()
+#1 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/index.php(16): ControladorPlantilla::ctrPlantilla()
+#3 {main}
+  thrown in /home/asonacop/public_html/system/vistas/modulos/inicio.php on line 113
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:27:35 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/empleados.php on line 3
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:26 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:29 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/usuarios.php on line 3
+[05-Aug-2020 21:28:31 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/usuarios.php on line 3
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:28:40 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:33:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:34:17 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:36:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:11 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:23 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:38:49 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:41:33 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 21:41:41 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:31:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:31:58 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:33:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:34:06 America/New_York] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/asonacop/public_html/system/index.php on line 2
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:34:06 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:34:21 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:43:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:44:16 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[05-Aug-2020 22:46:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[06-Aug-2020 07:56:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method ModeloParticipantes::mdlEliminarParticipante() in /home/asonacop/public_html/system/controladores/participantes.controlador.php:355
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/modulos/participantes.php(687): ControladorParticipantes::ctrEliminarParticipante()
+#1 /home/asonacop/public_html/system/vistas/plantilla.php(176): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/index.php(19): ControladorPlantilla::ctrPlantilla()
+#4 {main}
+  thrown in /home/asonacop/public_html/system/controladores/participantes.controlador.php on line 355
+[06-Aug-2020 07:57:07 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method ModeloParticipantes::mdlEliminarParticipante() in /home/asonacop/public_html/system/controladores/participantes.controlador.php:355
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/modulos/participantes.php(687): ControladorParticipantes::ctrEliminarParticipante()
+#1 /home/asonacop/public_html/system/vistas/plantilla.php(176): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/index.php(19): ControladorPlantilla::ctrPlantilla()
+#4 {main}
+  thrown in /home/asonacop/public_html/system/controladores/participantes.controlador.php on line 355
+[06-Aug-2020 07:58:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method ModeloParticipantes::mdlEliminarParticipante() in /home/asonacop/public_html/system/controladores/participantes.controlador.php:355
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/modulos/participantes.php(687): ControladorParticipantes::ctrEliminarParticipante()
+#1 /home/asonacop/public_html/system/vistas/plantilla.php(176): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/index.php(19): ControladorPlantilla::ctrPlantilla()
+#4 {main}
+  thrown in /home/asonacop/public_html/system/controladores/participantes.controlador.php on line 355
+[06-Aug-2020 08:00:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method ModeloParticipantes::mdlEliminarParticipante() in /home/asonacop/public_html/system/controladores/participantes.controlador.php:355
+Stack trace:
+#0 /home/asonacop/public_html/system/vistas/modulos/participantes.php(687): ControladorParticipantes::ctrEliminarParticipante()
+#1 /home/asonacop/public_html/system/vistas/plantilla.php(176): include('/home/asonacop/...')
+#2 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/index.php(19): ControladorPlantilla::ctrPlantilla()
+#4 {main}
+  thrown in /home/asonacop/public_html/system/controladores/participantes.controlador.php on line 355
+[06-Aug-2020 17:00:00 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:00 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:06 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:06 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:08 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:08 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:09 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:09 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:10 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:10 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:33 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:33 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:40 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:40 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:43 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:00:43 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:38 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:38 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:48 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:48 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:49 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:02:49 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:03:53 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:03:53 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:18 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:18 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:21 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:21 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:54 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:04:54 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:17 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:17 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:19 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:19 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:52 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:05:52 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:06:14 America/New_York] PHP Warning:  require_once(controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 17:06:14 America/New_York] PHP Fatal error:  require_once(): Failed opening required 'controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/index.php on line 19
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:14:56 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:18:01 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:19:07 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:19:28 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[06-Aug-2020 19:20:13 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[07-Aug-2020 22:40:48 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: foto in /home/asonacop/public_html/system/vistas/modulos/cabezote.php on line 50
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 21
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 50
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 75
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 100
+[07-Aug-2020 22:42:36 America/New_York] PHP Notice:  Undefined index: perfil in /home/asonacop/public_html/system/vistas/modulos/menu.php on line 215
+[08-Sep-2020 13:04:10 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 44
+[10-Sep-2020 09:43:27 America/New_York] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 44
+[10-Sep-2020 09:43:27 America/New_York] PHP Warning:  mkdir(): File exists in /home/asonacop/public_html/system/controladores/activos.controlador.php on line 55
+[14-Feb-2024 13:30:40 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[19-Feb-2024 14:06:54 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[20-Feb-2024 10:08:15 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Feb-2024 09:33:26 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Feb-2024 09:38:28 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Feb-2024 09:44:05 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[29-May-2024 17:08:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:24:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:24:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:24:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:24:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:24:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:25:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 18:28:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 19:51:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-May-2024 22:39:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 02:05:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 02:33:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 05:08:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:20:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:21:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:21:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:21:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:21:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 17:21:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 18:07:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 18:08:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-May-2024 22:40:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 00:45:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 01:34:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 06:06:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:31:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:31:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:32:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:32:10 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:32:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:32:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:40:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 13:40:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-May-2024 20:13:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 03:59:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 18:48:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 19:08:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 21:10:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 21:50:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jun-2024 23:10:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Jun-2024 14:04:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 14:39:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 14:39:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 14:39:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 14:39:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 22:02:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jun-2024 23:40:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 08:49:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:25:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:25:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:25:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:25:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:32:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:32:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:34:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 17:34:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:56:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:56:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:56:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:56:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:57:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:57:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:58:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jun-2024 19:58:13 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 09:21:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 17:23:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 17:23:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 17:23:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 17:23:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 17:23:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:21:13 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:21:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:21:36 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:21:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:23:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jun-2024 18:23:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:06:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:06:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:06:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:07:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:07:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Jun-2024 14:07:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 13:46:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 13:57:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 13:57:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 13:57:58 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 13:58:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[07-Jun-2024 16:13:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Jun-2024 05:37:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[10-Jun-2024 15:20:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[11-Jun-2024 15:18:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[12-Jun-2024 07:27:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[12-Jun-2024 13:52:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jun-2024 10:18:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jun-2024 10:21:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jun-2024 19:26:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jun-2024 19:29:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:44:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:44:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:44:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:44:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:46:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:46:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:48:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:48:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:49:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:49:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:51:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:51:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:53:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:53:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:54:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:54:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:55:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 18:55:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 20:00:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jun-2024 20:00:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[16-Jun-2024 22:56:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[17-Jun-2024 11:44:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[17-Jun-2024 12:12:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 03:32:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 06:33:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 07:36:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 14:20:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 14:21:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 14:21:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 14:21:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 14:35:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 18:25:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jun-2024 18:27:58 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 03:34:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 17:28:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 17:28:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 17:28:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 17:28:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:18:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:18:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:18:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:18:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:20:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jun-2024 20:21:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 06:25:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 09:33:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:12:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:14:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:14:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:14:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:14:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:15:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:18:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:18:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:20:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:20:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:22:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:22:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:23:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:23:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:24:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:25:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:26:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:26:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:27:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:27:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:29:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 19:29:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[20-Jun-2024 22:05:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 00:07:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 06:01:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 09:38:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:12:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:12:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:13:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:13:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:13:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:16:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 16:16:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 19:40:37 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jun-2024 20:41:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jun-2024 18:22:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jun-2024 18:24:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jun-2024 03:47:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jun-2024 05:49:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jun-2024 15:22:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jun-2024 17:12:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jun-2024 20:56:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 06:31:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 07:14:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 16:23:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 16:52:36 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 17:45:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 21:35:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jun-2024 23:21:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 09:04:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 09:04:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 09:40:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 09:41:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 10:51:10 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jun-2024 18:34:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 08:46:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:22:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:22:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:22:13 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:22:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:22:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:25:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jun-2024 20:30:58 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[27-Jun-2024 18:51:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[28-Jun-2024 14:10:58 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[28-Jun-2024 14:19:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[28-Jun-2024 14:20:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[28-Jun-2024 21:56:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jun-2024 04:51:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jun-2024 10:26:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-Jun-2024 05:18:33 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-Jun-2024 21:22:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-Jun-2024 22:45:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 11:49:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 11:52:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 17:06:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 17:07:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 17:07:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 17:07:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 20:46:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Jul-2024 20:49:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Jul-2024 07:03:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Jul-2024 08:17:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[03-Jul-2024 20:44:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[04-Jul-2024 08:42:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Jul-2024 13:42:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[12-Jul-2024 17:53:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[12-Jul-2024 18:37:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[12-Jul-2024 21:14:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jul-2024 07:28:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jul-2024 12:32:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jul-2024 13:38:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[13-Jul-2024 16:53:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jul-2024 18:03:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[14-Jul-2024 18:04:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[15-Jul-2024 09:08:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[17-Jul-2024 19:27:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 15:42:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 15:42:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 15:42:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 15:42:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 15:43:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 20:22:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[18-Jul-2024 23:41:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jul-2024 07:20:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jul-2024 07:24:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[19-Jul-2024 22:25:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Jul-2024 06:55:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 02:10:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 11:36:15 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:13:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:13:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:14:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:14:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:14:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:14:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:24:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:26:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:27:37 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:37:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:37:58 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:42:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 13:42:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 14:07:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 14:07:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:22:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:23:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:23:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:24:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:24:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:24:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:24:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:25:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:25:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:35:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:35:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:35:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:39:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:40:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:40:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:40:28 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:41:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:41:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:41:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:41:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:42:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:42:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:42:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:42:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:43:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:43:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:44:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:44:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:45:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:46:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:46:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:46:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:46:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:47:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:49:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:52:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:52:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 18:59:17 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:13:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:15:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 15:15:03 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[22-Jul-2024 19:15:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:33:14 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:35:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:35:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:35:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:35:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:36:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:37:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:37:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:51:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:51:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:51:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:51:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:52:13 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:52:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:52:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:52:59 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 19:57:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 20:05:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 20:05:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 20:06:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[22-Jul-2024 20:06:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 00:48:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 11:11:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 13:01:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 13:01:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 13:02:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 13:02:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 13:02:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:46:32 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:46:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:46:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:46:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:48:04 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 16:48:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 17:30:51 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 17:31:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 17:31:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 17:31:05 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 21:32:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[23-Jul-2024 21:40:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jul-2024 00:00:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jul-2024 07:05:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jul-2024 12:18:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jul-2024 12:20:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[24-Jul-2024 21:31:10 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 12:03:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:31:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:31:31 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:31:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:31:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:31:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:32:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:49:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:55:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 09:55:02 America/Caracas] PHP Warning:  getimagesize(): Filename cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[25-Jul-2024 13:55:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:55:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:56:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 13:56:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:04:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:53:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:53:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:53:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:53:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:54:46 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 14:54:50 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 15:26:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 15:39:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 15:40:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[25-Jul-2024 18:07:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jul-2024 04:45:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jul-2024 08:01:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jul-2024 08:01:47 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jul-2024 14:03:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[26-Jul-2024 20:33:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[27-Jul-2024 21:03:25 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[28-Jul-2024 16:10:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jul-2024 11:18:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jul-2024 16:13:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jul-2024 16:14:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[29-Jul-2024 23:52:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[30-Jul-2024 09:42:07 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[31-Jul-2024 13:08:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 09:07:11 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 14:12:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 14:13:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 14:13:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 14:13:06 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 15:09:44 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 15:09:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 15:09:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 15:09:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:29:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:49:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:49:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:49:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:50:02 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:50:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[01-Aug-2024 18:51:00 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 04:30:53 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 06:18:10 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 08:22:48 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 16:16:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 16:17:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[02-Aug-2024 21:38:57 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Aug-2024 03:05:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Aug-2024 03:10:08 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Aug-2024 15:58:12 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[05-Aug-2024 20:24:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 14:57:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 14:57:21 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 14:57:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 14:57:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 14:57:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:25:09 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:25:16 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:25:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:25:22 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:42:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[06-Aug-2024 17:55:19 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 09:30:42 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:54:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:55:55 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:56:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:56:49 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:57:39 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 12:58:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 15:27:29 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 15:27:52 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 15:27:56 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 15:30:54 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 19:30:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:40:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:40:34 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:40:35 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:40:41 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:51:27 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:51:30 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:52:24 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:52:26 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:52:43 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:52:45 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:53:01 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:53:03 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:53:18 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[08-Aug-2024 20:53:20 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[09-Aug-2024 03:41:40 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[09-Aug-2024 14:05:38 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[10-Aug-2024 07:53:23 UTC] PHP Notice:  session_start(): A session had already been started - ignoring in /home/asonacop/public_html/system/controladores/proveedores.controlador.php on line 2
+[21-Aug-2024 14:32:48 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Aug-2024 14:43:40 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Aug-2024 15:10:09 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Aug-2024 15:17:02 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Aug-2024 15:19:09 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[21-Aug-2024 15:34:11 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[07-Oct-2024 15:40:42 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[07-Oct-2024 15:43:54 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[07-Oct-2024 15:47:53 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[07-Oct-2024 15:48:06 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[14-Oct-2024 15:05:44 America/Caracas] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/asonacop/public_html/system/controladores/empleados.controlador.php:30
+Stack trace:
+#0 /home/asonacop/public_html/system/controladores/empleados.controlador.php(30): getimagesize('')
+#1 /home/asonacop/public_html/system/vistas/modulos/empleados.php(352): ControladorEmpleados::ctrCrearEmpleado()
+#2 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#3 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#5 {main}
+  thrown in /home/asonacop/public_html/system/controladores/empleados.controlador.php on line 30
+[23-Jun-2025 15:26:08 America/Caracas] PHP Warning:  foreach() argument must be of type array|object, null given in /home/asonacop/public_html/system/controladores/asignaciones.controlador.php on line 36
+[23-Jun-2025 15:26:08 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect double value: '' for column `asonacop_system`.`asignaciones`.`total` at row 1 in /home/asonacop/public_html/system/modelos/asignaciones.modelo.php:53
+Stack trace:
+#0 /home/asonacop/public_html/system/modelos/asignaciones.modelo.php(53): PDOStatement->execute()
+#1 /home/asonacop/public_html/system/controladores/asignaciones.controlador.php(94): ModeloAsignaciones::mdlIngresarAsignacion('asignaciones', Array)
+#2 /home/asonacop/public_html/system/vistas/modulos/crear-asignacion.php(253): ControladorAsignaciones::ctrCrearAsignacion()
+#3 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#5 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#6 {main}
+  thrown in /home/asonacop/public_html/system/modelos/asignaciones.modelo.php on line 53
+[26-Sep-2025 15:32:36 America/Caracas] PHP Warning:  Undefined variable $encriptar in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 444
+[26-Sep-2025 15:32:36 America/Caracas] PHP Warning:  Undefined array key "idUsuario" in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 453
+[26-Sep-2025 15:32:36 America/Caracas] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'password' cannot be null in /home/asonacop/public_html/system/modelos/usuarios.modelo.php:85
+Stack trace:
+#0 /home/asonacop/public_html/system/modelos/usuarios.modelo.php(85): PDOStatement->execute()
+#1 /home/asonacop/public_html/system/controladores/usuarios.controlador.php(464): ModeloUsuarios::mdlEditarUsuario('usuarios', Array)
+#2 /home/asonacop/public_html/system/vistas/modulos/usuarios.php(427): ControladorUsuarios::ctrEditarUsuario()
+#3 /home/asonacop/public_html/system/vistas/plantilla.php(180): include('/home/asonacop/...')
+#4 /home/asonacop/public_html/system/controladores/plantilla.controlador.php(5): include('/home/asonacop/...')
+#5 /home/asonacop/public_html/system/index.php(31): ControladorPlantilla::ctrPlantilla()
+#6 {main}
+  thrown in /home/asonacop/public_html/system/modelos/usuarios.modelo.php on line 85
+[26-Sep-2025 15:33:31 America/Caracas] PHP Warning:  Undefined array key "idUsuario" in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 453
+[29-Sep-2025 13:03:25 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 26
+[29-Sep-2025 13:04:20 America/Caracas] PHP Warning:  Undefined array key "idUsuario" in /home/asonacop/public_html/system/controladores/usuarios.controlador.php on line 453
+[03-Jul-2026 09:07:07 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/controladores/usuarios.controlador.php on line 26
+[21-Jul-2026 15:37:02 America/Caracas] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/controladores/usuarios.controlador.php on line 26

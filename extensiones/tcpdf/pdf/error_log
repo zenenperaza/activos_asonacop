@@ -1,0 +1,11 @@
+[25-Jul-2020 11:26:58 America/New_York] PHP Deprecated:  The each() function is deprecated. This message will be suppressed on further calls in /home/asonacop/public_html/system/extensiones/tcpdf/tcpdf.php on line 16542
+[23-Jun-2025 20:00:07 UTC] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home/asonacop/public_html/system/extensiones/tcpdf/tcpdf.php on line 16893
+[30-Jun-2026 19:21:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 27
+[30-Jun-2026 19:21:41 UTC] PHP Deprecated:  substr(): Passing null to parameter #1 ($string) of type string is deprecated in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 27
+[30-Jun-2026 19:21:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 28
+[30-Jun-2026 19:21:41 UTC] PHP Deprecated:  json_decode(): Passing null to parameter #1 ($json) of type string is deprecated in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 28
+[30-Jun-2026 19:21:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 29
+[30-Jun-2026 19:21:41 UTC] PHP Deprecated:  number_format(): Passing null to parameter #1 ($num) of type float is deprecated in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 29
+[30-Jun-2026 19:21:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 34
+[30-Jun-2026 19:21:41 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/asonacopcom/public_html/system/extensiones/tcpdf/pdf/asignacion.php on line 44
+[30-Jun-2026 19:21:41 UTC] PHP Fatal error:  Array and string offset access syntax with curly braces is no longer supported in /home/asonacopcom/public_html/system/extensiones/tcpdf/tcpdf.php on line 16893

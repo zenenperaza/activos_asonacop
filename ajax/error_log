@@ -1,0 +1,37 @@
+[05-Aug-2020 23:05:06 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_real_escape_string() in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php:36
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(86): TablaParticipantes->mostrarTablaParticipantes()
+#1 {main}
+  thrown in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 36
+[06-Aug-2020 16:07:27 America/New_York] PHP Warning:  require_once(../controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 6
+[06-Aug-2020 16:07:27 America/New_York] PHP Fatal error:  require_once(): Failed opening required '../controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 6
+[06-Aug-2020 16:11:55 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorEstados' not found in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php:37
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(91): TablaParticipantes->mostrarTablaParticipantes()
+#1 {main}
+  thrown in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 37
+[06-Aug-2020 16:13:42 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorEstados' not found in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php:37
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(91): TablaParticipantes->mostrarTablaParticipantes()
+#1 {main}
+  thrown in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 37
+[06-Aug-2020 16:16:17 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ControladorEstados' not found in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php:37
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(91): TablaParticipantes->mostrarTablaParticipantes()
+#1 {main}
+  thrown in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 37
+[06-Aug-2020 17:10:13 America/New_York] PHP Warning:  require_once(../controladores/estados.controlador.php): failed to open stream: No such file or directory in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 6
+[06-Aug-2020 17:10:13 America/New_York] PHP Fatal error:  require_once(): Failed opening required '../controladores/estados.controlador.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 6
+[06-Aug-2020 18:11:46 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ModeloEstados' not found in /home/asonacop/public_html/system/controladores/estados.controlador.php:13
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(40): ControladorEstados::ctrMostrarEstados('id', '2')
+#1 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(91): TablaParticipantes->mostrarTablaParticipantes()
+#2 {main}
+  thrown in /home/asonacop/public_html/system/controladores/estados.controlador.php on line 13
+[06-Aug-2020 18:12:17 America/New_York] PHP Fatal error:  Uncaught Error: Class 'ModeloEstados' not found in /home/asonacop/public_html/system/controladores/estados.controlador.php:13
+Stack trace:
+#0 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(40): ControladorEstados::ctrMostrarEstados('id', '2')
+#1 /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php(91): TablaParticipantes->mostrarTablaParticipantes()
+#2 {main}
+  thrown in /home/asonacop/public_html/system/controladores/estados.controlador.php on line 13
+[27-Aug-2020 15:45:17 America/New_York] PHP Parse error:  syntax error, unexpected '$nombreCompleto' (T_VARIABLE) in /home/asonacop/public_html/system/ajax/datatable-participantes.ajax.php on line 48
