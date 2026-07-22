@@ -72,6 +72,7 @@ class TablaActivos{
 				$codigo,
 				isset($categorias["categoria"]) ? $categorias["categoria"] : '',
 				$activos[$i]["descripcion"],
+				$activos[$i]["serial_numero"],
 				$activos[$i]["origen_activo"],
 				$activos[$i]["situacion_contable"],
 				isset($responsables["nombre"]) ? $responsables["nombre"] : '',

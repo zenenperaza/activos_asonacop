@@ -70,6 +70,7 @@ if($_SESSION["perfil"] == "Especial"){
            <th>Código</th>
            <th>Categoría</th>
            <th>Descripción</th>
+           <th>Nro Serial</th>
            <th>Origen</th>
            <th>Situación contable</th>
            <th>Responsable</th>
@@ -254,6 +255,20 @@ MODAL AGREGAR ACTIVO
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" pattern="[A-Za-z0-9 ]{1,100}" required>
+
+              </div>
+
+            </div>
+
+             <!-- ENTRADA PARA EL SERIAL NUMERO -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-barcode"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevoSerialNumero" placeholder="Ingresar serial número">
 
               </div>
 
@@ -695,6 +710,20 @@ MODAL EDITAR ACTIVO
 
             </div>
             
+             <!-- ENTRADA PARA EL SERIAL NUMERO -->
+
+             <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-barcode"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="editarSerialNumero" id="editarSerialNumero" placeholder="Ingresar serial número">
+
+              </div>
+
+            </div>
+
              <!-- ENTRADA PARA LA FECHA DE ADQUISICION -->
           <div class="form-group">
 

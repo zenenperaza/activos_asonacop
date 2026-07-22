@@ -6,7 +6,7 @@ class ControladorActivos{
 	MOSTRAR Activos
 	=============================================*/
 
-	static public function ctrMostrarActivos($item, $valor, $orden){
+	public static function ctrMostrarActivos($item, $valor, $orden){
 
 		$tabla = "activos";
 
@@ -19,7 +19,7 @@ class ControladorActivos{
 	/*=============================================
 	CONTAR ACTIVOS POR UBICACION FISICA
 	=============================================*/
-	static public function ctrContarPorUbicacion(){
+	public static function ctrContarPorUbicacion(){
 
 		$tabla = "activos";
 
@@ -33,7 +33,7 @@ class ControladorActivos{
 	CREAR Activo
 	=============================================*/
 
-	static public function ctrCrearActivo(){
+	public static function ctrCrearActivo(){
 
 		if(isset($_POST["nuevaDescripcion"])){
 
@@ -123,28 +123,26 @@ class ControladorActivos{
 							   "codigo_uf" => $_POST["nuevoCodigoUF"],
 							   "codigo" => $_POST["nuevoCodigo"],
 							   "descripcion" => $nuevaDescripcion,
-							   "fecha_adquisicion" => $_POST["nuevaFechaAdquisicion"],
-							   "fuente_financiamiento" => $_POST["nuevaFuenteFinanciamiento"],
-							   "origen_activo" => $_POST["nuevoOrigen"],
+					   "serial_numero" => isset($_POST["nuevoSerialNumero"]) ? $_POST["nuevoSerialNumero"] : "",
+					   "fecha_adquisicion" => isset($_POST["nuevaFechaAdquisicion"]) && $_POST["nuevaFechaAdquisicion"] !== "" ? $_POST["nuevaFechaAdquisicion"] : "",
+					   "fuente_financiamiento" => $_POST["nuevaFuenteFinanciamiento"],
+					   "origen_activo" => $_POST["nuevoOrigen"],
 					   "tipo_origen" => $_POST["nuevoTipoOrigen"],
 					   "situacion_contable" => $_POST["nuevoSituacionContable"],
 					   "responsable" => $_POST["nuevoResponsable"],
 					   "fecha_entrega_res" => $_POST["nuevaFechaEntregaResponsable"],
 					   "estado_conservacion" => $_POST["nuevoEstadoConservacion"],
 					   "info_garantia" => $_POST["nuevaGarantia"],
-					   "observaciones" => $_POST["nuevaObservaciones"],                     
+					   "observaciones" => $_POST["nuevaObservaciones"],
 					   "stock" => $_POST["nuevoStock"],
 					   "precio_compra_bs" => $_POST["nuevoPrecioCompraBs"],
 					   "precio_compra_ds" => $_POST["nuevoPrecioCompraDs"],
-					   "imagen" => $ruta);
-
-				$respuesta = ModeloActivos::mdlIngresarActivo($tabla, $datos);
-
-
+					"imagen" => $ruta);
+					$respuesta = ModeloActivos::mdlIngresarActivo($tabla, $datos);
 				if($respuesta == "ok"){
-          /*=============================================
-        AUDITORIA
-        =============================================*/
+			  /*=============================================
+			    AUDITORIA
+			    =============================================*/
   //       $tablaAuditoria = "usuarios";
   //       $itemAuditoria = "id";
   //       $valorAuditoria = $_GET["idUsuario"];
@@ -219,7 +217,7 @@ class ControladorActivos{
 	EDITAR ACTIVO
 	=============================================*/
 
-	static public function ctrEditarActivo(){
+	public static function ctrEditarActivo(){
 
 		if(isset($_POST["editarDescripcion"])){
 
@@ -321,18 +319,23 @@ class ControladorActivos{
 							   "codigo" => $_POST["editarCodigo"],
 							   "codigo_uf" => $_POST["editarCodigoUF"],
 							   "descripcion" => $editarDescripcion,
-							   "fecha_adquisicion" => $_POST["editarFechaAdquisicion"],
-							   "fuente_financiamiento" => $_POST["editarFuenteFinanciamiento"],
-							   "origen_activo" => $_POST["editarOrigen"],
+					   "serial_numero" => isset($_POST["editarSerialNumero"]) ? $_POST["editarSerialNumero"] : "",
+					   "fecha_adquisicion" => isset($_POST["editarFechaAdquisicion"]) && $_POST["editarFechaAdquisicion"] !== "" ? $_POST["editarFechaAdquisicion"] : "",
+					   "fuente_financiamiento" => $_POST["editarFuenteFinanciamiento"],
+					   "origen_activo" => $_POST["editarOrigen"],
 					   "tipo_origen" => $_POST["editarTipoOrigen"],
-                               "stock" => $_POST["editarStock"],
-							   "precio_compra_bs" => $_POST["editarPrecioCompraBs"],
-							   "precio_compra_ds" => $_POST["editarPrecioCompraDs"],
-							   "imagen" => $ruta);
-
-
-				$respuesta = ModeloActivos::mdlEditarActivo($tabla, $datos);
-
+					   "situacion_contable" => $_POST["editarSituacionContable"],
+					   "ubicacion_fisica" => $_POST["editarUbicacionFisica"],
+					   "responsable" => $_POST["editarResponsable"],
+					   "fecha_entrega_res" => $_POST["editarFechaEntregaResponsable"],
+					   "estado_conservacion" => $_POST["editarEstadoConservacion"],
+					   "info_garantia" => $_POST["editarGarantia"],
+					   "observaciones" => $_POST["editarObservaciones"],
+					   "stock" => $_POST["editarStock"],
+					   "precio_compra_bs" => $_POST["editarPrecioCompraBs"],
+					   "precio_compra_ds" => $_POST["editarPrecioCompraDs"],
+					"imagen" => $ruta);
+					$respuesta = ModeloActivos::mdlEditarActivo($tabla, $datos);
 				if($respuesta == "ok"){
                   /*=============================================
         AUDITORIA
@@ -396,7 +399,7 @@ class ControladorActivos{
 	/*=============================================
 	BORRAR ACTIVO
 	=============================================*/
-	static public function ctrEliminarActivo(){
+	public static function ctrEliminarActivo(){
 
 		if(isset($_GET["idActivo"])){
 
@@ -470,7 +473,7 @@ class ControladorActivos{
 	MOSTRAR SUMA VENTAS
 	=============================================*/
 
-	static public function ctrMostrarSumaAsignaciones(){
+	public static function ctrMostrarSumaAsignaciones(){
 
 		$tabla = "activos";
 

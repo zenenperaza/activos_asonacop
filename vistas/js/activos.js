@@ -284,6 +284,7 @@ $(".tablaActivos tbody").on("click", "button.btnEditarActivo", function(){
            $("#editarOrigen").val(respuesta["origen_activo"]);
            $("#editarOrigen").html(respuesta["origen_activo"]);          
            $("#editarTipoOrigen").val(respuesta["tipo_origen"]);
+           $("#editarSerialNumero").val(respuesta["serial_numero"]);
            
            $("#editarSituacionContable").val(respuesta["situacion_contable"]);
            $("#editarSituacionContable").html(respuesta["situacion_contable"]);
