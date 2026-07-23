@@ -144,7 +144,7 @@ class ModeloEmpleados{
 
 	static public function mdlBorrarEmpleado($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET deletes = '1' WHERE id = :id");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET eliminados = '1' WHERE id = :id");
 
 		$stmt -> bindParam(":id", $datos, PDO::PARAM_INT);
 

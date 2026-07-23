@@ -1,103 +1,158 @@
 <?php
 
-require_once "../controladores/activos.controlador.php";
-require_once "../modelos/activos.modelo.php";
+require_once __DIR__."/../modelos/conexion.php";
 
-require_once "../controladores/categorias.controlador.php";
-require_once "../modelos/categorias.modelo.php";
+header("Content-Type: application/json; charset=utf-8");
 
-require_once "../controladores/empleados.controlador.php";
-require_once "../modelos/empleados.modelo.php";
+$draw = isset($_GET["draw"]) ? (int) $_GET["draw"] : 0;
+$inicio = isset($_GET["start"]) ? max(0, (int) $_GET["start"]) : 0;
+$cantidad = isset($_GET["length"]) ? (int) $_GET["length"] : 50;
+$cantidad = $cantidad === -1 ? 500 : min(max($cantidad, 10), 500);
+$busqueda = isset($_GET["search"]["value"]) ? trim($_GET["search"]["value"]) : "";
+$oficina = isset($_GET["oficina"]) ? trim($_GET["oficina"]) : "";
 
+$columnasOrden = array(
+	"a.id",
+	"a.imagen",
+	"a.codigo",
+	"c.categoria",
+	"a.descripcion",
+	"a.serial_numero",
+	"a.origen_activo",
+	"a.situacion_contable",
+	"e.nombre",
+	"a.ubicacion_fisica",
+	"a.stock",
+	"a.precio_compra_bs",
+	"a.precio_compra_ds",
+	"a.fecha_adquisicion",
+	"a.observaciones",
+	"a.id"
+);
 
-class TablaActivos{
+$columnaSolicitada = isset($_GET["order"][0]["column"]) ? (int) $_GET["order"][0]["column"] : 0;
+$columnaOrden = isset($columnasOrden[$columnaSolicitada]) ? $columnasOrden[$columnaSolicitada] : "a.id";
+$direccionOrden = isset($_GET["order"][0]["dir"]) && strtolower($_GET["order"][0]["dir"]) === "asc" ? "ASC" : "DESC";
 
- 	/*=============================================
- 	 MOSTRAR LA TABLA DE Activos
-  	=============================================*/ 
+$desde = " FROM activos a
+		   LEFT JOIN categorias c ON c.id = a.id_categoria
+		   LEFT JOIN empleados e ON e.id = a.responsable";
 
-	public function mostrarTablaActivos(){
- 
-		$item = null;
-    	$valor = null;
-    	$orden = "id";
+$condiciones = array();
+$parametros = array();
 
-  		$activos = ControladorActivos::ctrMostrarActivos($item, $valor, $orden);	
-  		
-  		if(count($activos) == 0){
-
-  			echo '{"data": []}';
-
-		  	return;
-  		}
-
-		$datos = array();
-
-		for($i = 0; $i < count($activos); $i++){
-
-			// Imagen
-			$imagen = "<img src='".$activos[$i]["imagen"]."' width='40px'>";
-
-			// Categoria
-			$item = "id";
-			$valor = $activos[$i]["id_categoria"];
-			$categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
-			// Responsable
-			$itemResp = "id";
-			$valorResp = $activos[$i]["responsable"];
-			$responsables = ControladorEmpleados::ctrMostrarEmpleados($itemResp, $valorResp);
-
-			// Stock
-			if($activos[$i]["stock"] <= 10){
-				$stock = "<button class='btn btn-danger'>".$activos[$i]["stock"]."</button>";
-			}else if($activos[$i]["stock"] > 11 && $activos[$i]["stock"] <= 15){
-				$stock = "<button class='btn btn-warning'>".$activos[$i]["stock"]."</button>";
-			}else{
-				$stock = "<button class='btn btn-success'>".$activos[$i]["stock"]."</button>";
-			}
-
-			// Botones
-			$botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarActivo' idActivo='".$activos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarActivo'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarActivo' idActivo='".$activos[$i]["id"]."' codigo='".$activos[$i]["codigo"]."' imagen='".$activos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>";
-
-			$codigo = $activos[$i]["codigo_uf"]."-".$activos[$i]["codigo"];
-
-			$precio_compra_bs = number_format($activos[$i]["precio_compra_bs"], 2, ',', '.');
-			$precio_compra_ds = $activos[$i]["precio_compra_ds"];
-			$precio_compra_bs = "Bs. ".$precio_compra_bs;
-
-			$datos[] = array(
-				($i+1),
-				$imagen,
-				$codigo,
-				isset($categorias["categoria"]) ? $categorias["categoria"] : '',
-				$activos[$i]["descripcion"],
-				$activos[$i]["serial_numero"],
-				$activos[$i]["origen_activo"],
-				$activos[$i]["situacion_contable"],
-				isset($responsables["nombre"]) ? $responsables["nombre"] : '',
-				$activos[$i]["ubicacion_fisica"],
-				$stock,
-				$precio_compra_bs,
-				$precio_compra_ds,
-				$activos[$i]["fecha_adquisicion"],
-				$activos[$i]["observaciones"],
-				$botones
-			);
-
-		}
-
-		echo json_encode(array("data" => $datos));
-
-
-	}
-
-
+if($oficina !== ""){
+	$condiciones[] = "a.ubicacion_fisica = ?";
+	$parametros[] = $oficina;
 }
 
-/*=============================================
-ACTIVAR TABLA DE activos
-=============================================*/ 
-$activarActivos = new TablaActivos();
-$activarActivos -> mostrarTablaActivos();
+if($busqueda !== ""){
+	$camposBusqueda = array(
+		"a.id",
+		"CONCAT(a.codigo_uf, '-', a.codigo)",
+		"c.categoria",
+		"a.descripcion",
+		"a.serial_numero",
+		"a.origen_activo",
+		"a.situacion_contable",
+		"e.nombre",
+		"a.ubicacion_fisica",
+		"a.stock",
+		"a.precio_compra_bs",
+		"a.precio_compra_ds",
+		"a.fecha_adquisicion",
+		"a.observaciones"
+	);
 
+	$busquedas = array();
+	foreach($camposBusqueda as $campo){
+		$busquedas[] = $campo." LIKE ?";
+		$parametros[] = "%".$busqueda."%";
+	}
+	$condiciones[] = "(".implode(" OR ", $busquedas).")";
+}
+
+$donde = count($condiciones) ? " WHERE ".implode(" AND ", $condiciones) : "";
+
+try{
+	$conexion = Conexion::conectar();
+	$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	$totalActivos = (int) $conexion->query("SELECT COUNT(*) FROM activos")->fetchColumn();
+
+	$stmtFiltrados = $conexion->prepare("SELECT COUNT(*)".$desde.$donde);
+	$stmtFiltrados->execute($parametros);
+	$totalFiltrados = (int) $stmtFiltrados->fetchColumn();
+
+	$sql = "SELECT a.*, c.categoria, e.nombre AS nombre_responsable"
+		 .$desde
+		 .$donde
+		 ." ORDER BY ".$columnaOrden." ".$direccionOrden
+		 ." LIMIT ".$inicio.", ".$cantidad;
+
+	$stmt = $conexion->prepare($sql);
+	$stmt->execute($parametros);
+	$activos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+	$datos = array();
+
+	foreach($activos as $indice => $activo){
+		$rutaImagen = htmlspecialchars($activo["imagen"], ENT_QUOTES, "UTF-8");
+		$imagen = "<img src='".$rutaImagen."' width='40px' loading='lazy'>";
+
+		if((int) $activo["stock"] <= 10){
+			$stock = "<button class='btn btn-danger'>".(int) $activo["stock"]."</button>";
+		}else if((int) $activo["stock"] <= 15){
+			$stock = "<button class='btn btn-warning'>".(int) $activo["stock"]."</button>";
+		}else{
+			$stock = "<button class='btn btn-success'>".(int) $activo["stock"]."</button>";
+		}
+
+		$id = (int) $activo["id"];
+		$codigoActivo = htmlspecialchars($activo["codigo"], ENT_QUOTES, "UTF-8");
+		$botones = "<div class='btn-group'>"
+				 ."<button class='btn btn-warning btnEditarActivo' idActivo='".$id."' data-toggle='modal' data-target='#modalEditarActivo'><i class='fa fa-pencil'></i></button>"
+				 ."<button class='btn btn-danger btnEliminarActivo' idActivo='".$id."' codigo='".$codigoActivo."' imagen='".$rutaImagen."'><i class='fa fa-times'></i></button>"
+				 ."</div>";
+
+		$precioBs = is_numeric($activo["precio_compra_bs"])
+			? "Bs. ".number_format((float) $activo["precio_compra_bs"], 2, ",", ".")
+			: "Bs. ".$activo["precio_compra_bs"];
+
+		$datos[] = array(
+			$id,
+			$imagen,
+			$activo["codigo_uf"]."-".$activo["codigo"],
+			$activo["categoria"] ?: "",
+			$activo["descripcion"],
+			$activo["serial_numero"],
+			$activo["origen_activo"],
+			$activo["situacion_contable"],
+			$activo["nombre_responsable"] ?: "",
+			$activo["ubicacion_fisica"],
+			$stock,
+			$precioBs,
+			$activo["precio_compra_ds"],
+			$activo["fecha_adquisicion"],
+			$activo["observaciones"],
+			$botones
+		);
+	}
+
+	echo json_encode(array(
+		"draw" => $draw,
+		"recordsTotal" => $totalActivos,
+		"recordsFiltered" => $totalFiltrados,
+		"data" => $datos
+	), JSON_UNESCAPED_UNICODE);
+
+}catch(Exception $error){
+	http_response_code(500);
+	echo json_encode(array(
+		"draw" => $draw,
+		"recordsTotal" => 0,
+		"recordsFiltered" => 0,
+		"data" => array(),
+		"error" => "No se pudieron cargar los activos."
+	));
+}

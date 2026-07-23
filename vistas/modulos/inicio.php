@@ -125,20 +125,23 @@
       </div>
       <!-- /.row -->
       <!-- Ubicaciones: cuadros por ubicacion_fisica -->
+      <h3>Activos por Estado / Oficina</h3>
       <div class="row">
         <?php
           $ubicaciones = ControladorActivos::ctrContarPorUbicacion();
           if($ubicaciones){
             foreach($ubicaciones as $u){
               $nombre = htmlspecialchars($u["ubicacion_fisica"]);
+              $enlace = "index.php?ruta=activos&oficina=".rawurlencode($u["ubicacion_fisica"]);
               $total = (int)$u["total"];
               echo "<div class='col-lg-2 col-md-3 col-sm-4 col-xs-6'>";
-              echo "  <div class='small-box bg-gray' style='background:#f4f4f4;color:#333;'>";
+              echo "  <div class='small-box bg-aqua'>";
               echo "    <div class='inner'>";
               echo "      <h3>$total</h3>";
               echo "      <p>$nombre</p>";
               echo "    </div>";
-              echo "    <div class='icon'><i class='fa fa-map-marker'></i></div>";
+              echo "    <div class='icon'><i class='ion ion-bag'></i></div>";
+              echo "    <a href='$enlace' class='small-box-footer'>Ir a activos <i class='fa fa-arrow-circle-right'></i></a>";
               echo "  </div>";
               echo "</div>";
             }
@@ -269,4 +272,4 @@
             </div>
           </div>     
 
- </div>   </div>  
+ </div>   </div>

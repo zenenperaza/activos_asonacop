@@ -19,3 +19,20 @@ img.img-responsive {
     /* z-index: 9999999; */
     margin-left: 23rem;
 }
+.campo-activo-label {
+	display: block;
+	margin: 0 0 7px;
+	color: #333;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+#modalAgregarActivo .form-group,
+#modalEditarActivo .form-group {
+	margin-bottom: 18px;
+}
+
+#modalAgregarActivo .form-group.row > [class*="col-"],
+#modalEditarActivo .form-group.row > [class*="col-"] {
+	margin-bottom: 10px;
+}

@@ -37,12 +37,38 @@ class ModeloActivos{
 	}
 
 	/*=============================================
+	VALIDAR CÓDIGO ÚNICO
+	=============================================*/
+	static public function mdlExisteCodigoActivo($tabla, $codigoUF, $codigo, $idExcluir = null){
+
+		$sql = "SELECT id FROM $tabla
+				WHERE UPPER(TRIM(codigo_uf)) = UPPER(TRIM(:codigo_uf))
+				AND UPPER(TRIM(codigo)) = UPPER(TRIM(:codigo))";
+
+		if($idExcluir !== null){
+			$sql .= " AND id != :id";
+		}
+
+		$stmt = Conexion::conectar()->prepare($sql." LIMIT 1");
+		$stmt->bindParam(":codigo_uf", $codigoUF, PDO::PARAM_STR);
+		$stmt->bindParam(":codigo", $codigo, PDO::PARAM_STR);
+
+		if($idExcluir !== null){
+			$stmt->bindParam(":id", $idExcluir, PDO::PARAM_INT);
+		}
+
+		$stmt->execute();
+
+		return (bool) $stmt->fetch();
+	}
+
+	/*=============================================
 	REGISTRO DE ACTIVO
   
   INSERT INTO `activos` (`id`, `id_categoria`, `codigo`, `codigo_uf`, `descripcion`, `fecha_adquisicion`, `fuente_financiamiento`, `origen_activo`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`, `info_garantia`, `observaciones`, `imagen`, `stock`, `precio_compra_bs`, `precio_compra_ds`, `asignaciones`, `fecha_reg`) VALUES (NULL, '1', '199', 'LAR', 'MUEBLES', '20/08/2020', 'UNESCO', 'COMPRA', 'BUENA', 'LARA', 'ZENEN', '12/01/1980', 'BUNEO', 'SIN', 'SIN', 'FOTO.JPG', '1', '1', '1', '0', current_timestamp())
   
    INSERT INTO $tabla (`id_categoria`, `codigo`, `codigo_uf`, `descripcion`, `fecha_adquisicion`, `fuente_financiamiento`, 
-    `origen_activo`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`, 
+    `origen_activo`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`,
     `info_garantia`, `observaciones`, `imagen`, `stock`, `precio_compra_bs`, `precio_compra_ds`) 
     VALUES (:id_categoria, :codigo, :codigo_uf, :descripcion, :fecha_adquisicion, :fuente_financiamiento, :origen_activo,
     :situacion_contable, :ubicacion_fisica, :responsable, :fecha_entrega_res, :estado_conservacion, :info_garantia,
@@ -62,22 +88,22 @@ class ModeloActivos{
 	=============================================*/
 	static public function mdlIngresarActivo($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (`id_categoria`, `codigo`, `codigo_uf`, `descripcion`, `serial_numero`, `fecha_adquisicion`, `fuente_financiamiento`, 
-    `origen_activo`, `tipo_origen`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`, 
-    `info_garantia`, `observaciones`, `imagen`, `stock`, `precio_compra_bs`, `precio_compra_ds`) 
-    VALUES (:id_categoria, :codigo, :codigo_uf, :descripcion, :serial_numero, :fecha_adquisicion, :fuente_financiamiento, :origen_activo, :tipo_origen,
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (`id_categoria`, `codigo`, `codigo_uf`, `descripcion`, `serial_numero`, `fecha_adquisicion`, `fuente_financiamiento`,
+    `origen_activo`, `situacion_contable`, `ubicacion_fisica`, `responsable`, `fecha_entrega_res`, `estado_conservacion`,
+    `info_garantia`, `observaciones`, `imagen`, `stock`, `precio_compra_bs`, `precio_compra_ds`)
+    VALUES (:id_categoria, :codigo, :codigo_uf, :descripcion, :serial_numero, :fecha_adquisicion, :fuente_financiamiento, :origen_activo,
     :situacion_contable, :ubicacion_fisica, :responsable, :fecha_entrega_res, :estado_conservacion, :info_garantia,
     :observaciones, :imagen, :stock, :precio_compra_bs, :precio_compra_ds)");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
-		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_INT);
+		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
 		$stmt->bindParam(":codigo_uf", $datos["codigo_uf"], PDO::PARAM_STR);
 		$stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
 		$stmt->bindParam(":serial_numero", $datos["serial_numero"], PDO::PARAM_STR);
 		$stmt->bindParam(":fecha_adquisicion", $datos["fecha_adquisicion"], PDO::PARAM_STR);
 		$stmt->bindParam(":fuente_financiamiento", $datos["fuente_financiamiento"], PDO::PARAM_STR);
 		$stmt->bindParam(":origen_activo", $datos["origen_activo"], PDO::PARAM_STR);
-		$stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
+		// $stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
 		$stmt->bindParam(":situacion_contable", $datos["situacion_contable"], PDO::PARAM_STR);
 		$stmt->bindParam(":ubicacion_fisica", $datos["ubicacion_fisica"], PDO::PARAM_STR);
 		$stmt->bindParam(":responsable", $datos["responsable"], PDO::PARAM_STR);
@@ -110,17 +136,18 @@ class ModeloActivos{
 	=============================================*/
 	static public function mdlEditarActivo($tabla, $datos){
  
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, codigo_uf = :codigo_uf, descripcion = :descripcion, serial_numero = :serial_numero, fecha_adquisicion = :fecha_adquisicion, fuente_financiamiento = :fuente_financiamiento, origen_activo = :origen_activo, tipo_origen = :tipo_origen, situacion_contable = :situacion_contable, ubicacion_fisica = :ubicacion_fisica, responsable = :responsable, fecha_entrega_res = :fecha_entrega_res, estado_conservacion = :estado_conservacion, info_garantia = :info_garantia, observaciones = :observaciones, imagen = :imagen, stock = :stock, precio_compra_bs = :precio_compra_bs, precio_compra_ds = :precio_compra_ds WHERE codigo = :codigo");
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET id_categoria = :id_categoria, codigo = :codigo, codigo_uf = :codigo_uf, descripcion = :descripcion, serial_numero = :serial_numero, fecha_adquisicion = :fecha_adquisicion, fuente_financiamiento = :fuente_financiamiento, origen_activo = :origen_activo, situacion_contable = :situacion_contable, ubicacion_fisica = :ubicacion_fisica, responsable = :responsable, fecha_entrega_res = :fecha_entrega_res, estado_conservacion = :estado_conservacion, info_garantia = :info_garantia, observaciones = :observaciones, imagen = :imagen, stock = :stock, precio_compra_bs = :precio_compra_bs, precio_compra_ds = :precio_compra_ds WHERE id = :id");
 
 		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
 		$stmt->bindParam(":codigo_uf", $datos["codigo_uf"], PDO::PARAM_STR);
-		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_INT);
+		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
+		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
 		$stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
 		$stmt->bindParam(":serial_numero", $datos["serial_numero"], PDO::PARAM_STR);
 		$stmt->bindParam(":fecha_adquisicion", $datos["fecha_adquisicion"], PDO::PARAM_STR);
 		$stmt->bindParam(":fuente_financiamiento", $datos["fuente_financiamiento"], PDO::PARAM_STR);
 		$stmt->bindParam(":origen_activo", $datos["origen_activo"], PDO::PARAM_STR);
-		$stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
+		// $stmt->bindParam(":tipo_origen", $datos["tipo_origen"], PDO::PARAM_STR);
 		$stmt->bindParam(":situacion_contable", $datos["situacion_contable"], PDO::PARAM_STR);
 		$stmt->bindParam(":ubicacion_fisica", $datos["ubicacion_fisica"], PDO::PARAM_STR);
 		$stmt->bindParam(":responsable", $datos["responsable"], PDO::PARAM_STR);

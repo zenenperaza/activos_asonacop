@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
   <link rel="stylesheet" href="vistas/bower_components/datatables/buttons.dataTables.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="vistas/bower_components/datatables/jquery.dataTables.min.css"> 
+  <link rel="stylesheet" href="vistas/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css">
 
 
   <!-- iCheck for checkboxes and radio inputs -->
@@ -116,6 +117,7 @@
 
 <!-- bootstrap datepicker -->
 <script src="vistas/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="vistas/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.es.min.js"></script>
 
 <!-- bootstrap color picker -->
 <script src="vistas/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
@@ -208,14 +210,14 @@
  ?>
 
 
-<script src="vistas/js/plantilla.js"></script>
-<script src="vistas/js/usuarios.js"></script>
-<script src="vistas/js/categorias.js"></script>
-<script src="vistas/js/activos.js"></script>
-<script src="vistas/js/empleados.js"></script>
-<script src="vistas/js/asignaciones.js"></script>
-<script src="vistas/js/reportes.js"></script>    
-<script src="vistas/js/participantes.js"></script>
+<script src="vistas/js/plantilla.js?v=2"></script>
+<script src="vistas/js/usuarios.js?v=2"></script>
+<script src="vistas/js/categorias.js?v=2"></script>
+<script src="vistas/js/activos.js?v=2"></script>
+<script src="vistas/js/empleados.js?v=2"></script>
+<script src="vistas/js/asignaciones.js?v=2"></script>
+<script src="vistas/js/reportes.js?v=2"></script>    
+<script src="vistas/js/participantes.js?v=2"></script>
     
     
 

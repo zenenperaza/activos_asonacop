@@ -22,6 +22,7 @@ if($_SESSION["perfil"] == "Especial"){
       AUDITORIA FIN
       =============================================*/ 
 
+  $filtroOficina = isset($_GET["oficina"]) ? trim($_GET["oficina"]) : "";
 ?>
   <div class="content-wrapper">
 
@@ -59,7 +60,9 @@ if($_SESSION["perfil"] == "Especial"){
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive tablaActivos" width="100%">
+       <table class="table table-bordered table-striped dt-responsive tablaActivos"
+              data-filtro-oficina="<?php echo htmlspecialchars($filtroOficina, ENT_QUOTES, 'UTF-8'); ?>"
+              width="100%">
          
         <thead>
          
@@ -226,7 +229,7 @@ MODAL AGREGAR ACTIVO
               
                 <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="nuevoCodigoUF" name="nuevoCodigoUF" placeholder="Ingresar código por Ubicación física" readonly required>
+                <input type="text" class="form-control input-lg" id="nuevoCodigoUF" name="nuevoCodigoUF" placeholder="Ingresar código por Ubicación física"  required>
 
               </div>      
             </div>          
@@ -237,10 +240,14 @@ MODAL AGREGAR ACTIVO
               
               <div class="input-group">
                
-                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" readonly required>
+                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Código personalizado" maxlength="100" pattern="[A-Za-z0-9._-]+" autocomplete="off" required>
 
               </div>
 
+            </div>
+
+            <div class="col-xs-12">
+              <p class="help-block">Puede reemplazar el código sugerido por uno personalizado. El código completo debe ser único.</p>
             </div>
             
           </div>          
@@ -277,11 +284,11 @@ MODAL AGREGAR ACTIVO
              <!-- ENTRADA PARA LA FECHA DE ADQUISICION -->
           <div class="form-group">
 
-                <div class="input-group date">
+                <div class="input-group date selector-fecha-activo">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right input-lg" name="nuevaFechaAdquisicion" placeholder="Ingresar fecha de adquisición (dd/mm/yyyy)" id="" >
+                  <input type="text" class="form-control pull-right input-lg" name="nuevaFechaAdquisicion" placeholder="Seleccionar fecha de adquisición" autocomplete="off">
                 </div>
                 <!-- /.input group -->
               </div>
@@ -328,7 +335,7 @@ MODAL AGREGAR ACTIVO
 
             <!-- ENTRADA PARA TIPO DE ORIGEN -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               
               <div class="input-group">
               
@@ -338,7 +345,7 @@ MODAL AGREGAR ACTIVO
 
               </div>
 
-            </div>
+            </div> -->
             <!-- ENTRADA PARA SELECCIONAR SITUACION CONTABLE -->
 
             <div class="form-group">
@@ -409,11 +416,11 @@ MODAL AGREGAR ACTIVO
 
           <div class="form-group">
 
-                <div class="input-group date">
+                <div class="input-group date selector-fecha-activo">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right input-lg" name="nuevaFechaEntregaResponsable" placeholder="Ingresar fecha entrega (dd/mm/yyyy)" id="">
+                  <input type="text" class="form-control pull-right input-lg" name="nuevaFechaEntregaResponsable" placeholder="Seleccionar fecha de entrega" autocomplete="off">
                 </div>
                 <!-- /.input group -->
               </div>
@@ -675,7 +682,7 @@ MODAL EDITAR ACTIVO
               
                 <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarCodigoUF" name="editarCodigoUF" readonly required>
+                <input type="text" class="form-control input-lg" id="editarCodigoUF" name="editarCodigoUF"  required>
 
               </div>      
             </div>          
@@ -686,10 +693,14 @@ MODAL EDITAR ACTIVO
               
               <div class="input-group">
                
-                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" placeholder="Ingresar código" readonly required>
+                <input type="text" class="form-control input-lg" id="editarCodigo" name="editarCodigo" placeholder="Código personalizado" maxlength="100" pattern="[A-Za-z0-9._-]+" autocomplete="off" required>
 
               </div>
 
+            </div>
+
+            <div class="col-xs-12">
+              <p class="help-block">Puede cambiarlo por un código personalizado, siempre que no esté registrado.</p>
             </div>
             
           </div>  
@@ -727,7 +738,7 @@ MODAL EDITAR ACTIVO
              <!-- ENTRADA PARA LA FECHA DE ADQUISICION -->
           <div class="form-group">
 
-                <div class="input-group date">
+                <div class="input-group date selector-fecha-activo">
                  
                   <div class="input-group-addon">
                    
@@ -735,7 +746,7 @@ MODAL EDITAR ACTIVO
                     
                   </div>
                   
-                  <input type="text" class="form-control pull-right" name="editarFechaAdquisicion" id="editarFechaAdquisicion" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                  <input type="text" class="form-control pull-right" name="editarFechaAdquisicion" id="editarFechaAdquisicion" placeholder="Seleccionar fecha de adquisición" autocomplete="off">
                   
                 </div>
                 <!-- /.input group -->
@@ -782,7 +793,7 @@ MODAL EDITAR ACTIVO
 
             </div>
 
-            <!-- ENTRADA PARA TIPO DE ORIGEN -->
+            <!-- ENTRADA PARA TIPO DE ORIGEN
 
             <div class="form-group">
               
@@ -794,7 +805,7 @@ MODAL EDITAR ACTIVO
 
               </div>
 
-            </div>
+            </div> -->
             <!-- ENTRADA PARA SELECCIONAR SITUACION CONTABLE -->
 
             <div class="form-group">
@@ -861,11 +872,11 @@ MODAL EDITAR ACTIVO
              <!-- ENTRADA PARA LA FECHA DE ENTREGA -->
           <div class="form-group">
 
-                <div class="input-group date">
+                <div class="input-group date selector-fecha-activo">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" name="editarFechaEntregaResponsable" id="editarFechaEntregaResponsable" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                  <input type="text" class="form-control pull-right" name="editarFechaEntregaResponsable" id="editarFechaEntregaResponsable" placeholder="Seleccionar fecha de entrega" autocomplete="off">
                 </div>
                 <!-- /.input group -->
               </div>
@@ -988,6 +999,7 @@ MODAL EDITAR ACTIVO
               <img src="vistas/img/activos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
               <input type="hidden" name="imagenActual" id="imagenActual">
+              <input type="hidden" name="editarIdActivo" id="editarIdActivo">
 
             </div>
 
@@ -1041,4 +1053,3 @@ MODAL EDITAR ACTIVO
         ?>  
 </div>
  
-

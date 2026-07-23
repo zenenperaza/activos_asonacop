@@ -37,6 +37,34 @@ class ControladorActivos{
 
 		if(isset($_POST["nuevaDescripcion"])){
 
+			$tabla = "activos";
+			$codigoUF = strtoupper(trim($_POST["nuevoCodigoUF"]));
+			$codigo = strtoupper(trim($_POST["nuevoCodigo"]));
+
+			if(!preg_match('/^[A-Z0-9._-]+$/', $codigoUF) || !preg_match('/^[A-Z0-9._-]+$/', $codigo)){
+				echo '<script>
+					swal({
+						type: "error",
+						title: "Código no válido",
+						text: "Use solamente letras, números, puntos, guiones o guion bajo.",
+						confirmButtonText: "Aceptar"
+					});
+				</script>';
+				return;
+			}
+
+			if(ModeloActivos::mdlExisteCodigoActivo($tabla, $codigoUF, $codigo)){
+				echo '<script>
+					swal({
+						type: "error",
+						title: "Código duplicado",
+						text: "Ya existe un activo con el código '.$codigoUF.'-'.$codigo.'. Ingrese un código diferente.",
+						confirmButtonText: "Aceptar"
+					});
+				</script>';
+				return;
+			}
+
 // 			if(
 //         preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaDescripcion"]) &&
 //                preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nuevaFuenteFinanciamiento"]) && 
@@ -114,20 +142,18 @@ class ControladorActivos{
 
 			}
 
-			$tabla = "activos";
-                
         $nuevaDescripcion = strtoupper($_POST["nuevaDescripcion"]);         
 
 				$datos = array("id_categoria" => $_POST["nuevaCategoria"],
 							   "ubicacion_fisica" => $_POST["nuevoUbicacionFisica"],
-							   "codigo_uf" => $_POST["nuevoCodigoUF"],
-							   "codigo" => $_POST["nuevoCodigo"],
+							   "codigo_uf" => $codigoUF,
+							   "codigo" => $codigo,
 							   "descripcion" => $nuevaDescripcion,
 					   "serial_numero" => isset($_POST["nuevoSerialNumero"]) ? $_POST["nuevoSerialNumero"] : "",
 					   "fecha_adquisicion" => isset($_POST["nuevaFechaAdquisicion"]) && $_POST["nuevaFechaAdquisicion"] !== "" ? $_POST["nuevaFechaAdquisicion"] : "",
 					   "fuente_financiamiento" => $_POST["nuevaFuenteFinanciamiento"],
 					   "origen_activo" => $_POST["nuevoOrigen"],
-					   "tipo_origen" => $_POST["nuevoTipoOrigen"],
+					//    "tipo_origen" => $_POST["nuevoTipoOrigen"],
 					   "situacion_contable" => $_POST["nuevoSituacionContable"],
 					   "responsable" => $_POST["nuevoResponsable"],
 					   "fecha_entrega_res" => $_POST["nuevaFechaEntregaResponsable"],
@@ -156,14 +182,22 @@ class ControladorActivos{
         AUDITORIA FIN
         =============================================*/ 
 
-					echo'<script>
+					echo '<script>
 
-										window.location = "activos";
+						swal({
+							type: "success",
+							title: "Activo guardado",
+							text: "El activo se guardó satisfactoriamente.",
+							showConfirmButton: true,
+							confirmButtonText: "Aceptar",
+							allowOutsideClick: false
+						}).then(function(result){
+							if(result.value){
+								window.location = "activos";
+							}
+						});
 
-										}
-									})
-
-						</script>';
+					</script>';
 
 				} 
 //       else {
@@ -220,6 +254,35 @@ class ControladorActivos{
 	public static function ctrEditarActivo(){
 
 		if(isset($_POST["editarDescripcion"])){
+
+			$tabla = "activos";
+			$idActivo = (int) $_POST["editarIdActivo"];
+			$codigoUF = strtoupper(trim($_POST["editarCodigoUF"]));
+			$codigo = strtoupper(trim($_POST["editarCodigo"]));
+
+			if(!preg_match('/^[A-Z0-9._-]+$/', $codigoUF) || !preg_match('/^[A-Z0-9._-]+$/', $codigo)){
+				echo '<script>
+					swal({
+						type: "error",
+						title: "Código no válido",
+						text: "Use solamente letras, números, puntos, guiones o guion bajo.",
+						confirmButtonText: "Aceptar"
+					});
+				</script>';
+				return;
+			}
+
+			if(ModeloActivos::mdlExisteCodigoActivo($tabla, $codigoUF, $codigo, $idActivo)){
+				echo '<script>
+					swal({
+						type: "error",
+						title: "Código duplicado",
+						text: "Ya existe otro activo con el código '.$codigoUF.'-'.$codigo.'. Ingrese un código diferente.",
+						confirmButtonText: "Aceptar"
+					});
+				</script>';
+				return;
+			}
 
 			if( preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["editarDescripcion"])
 //          &&
@@ -310,20 +373,19 @@ class ControladorActivos{
 
 				}
 
-				$tabla = "activos";
-                
                 $editarDescripcion = $_POST["editarDescripcion"];
                 $editarDescripcion = strtoupper($editarDescripcion);
 
-				$datos = array("id_categoria" => $_POST["editarCategoria"],
-							   "codigo" => $_POST["editarCodigo"],
-							   "codigo_uf" => $_POST["editarCodigoUF"],
+				$datos = array("id" => $idActivo,
+							   "id_categoria" => $_POST["editarCategoria"],
+							   "codigo" => $codigo,
+							   "codigo_uf" => $codigoUF,
 							   "descripcion" => $editarDescripcion,
 					   "serial_numero" => isset($_POST["editarSerialNumero"]) ? $_POST["editarSerialNumero"] : "",
 					   "fecha_adquisicion" => isset($_POST["editarFechaAdquisicion"]) && $_POST["editarFechaAdquisicion"] !== "" ? $_POST["editarFechaAdquisicion"] : "",
 					   "fuente_financiamiento" => $_POST["editarFuenteFinanciamiento"],
 					   "origen_activo" => $_POST["editarOrigen"],
-					   "tipo_origen" => $_POST["editarTipoOrigen"],
+					//    "tipo_origen" => $_POST["editarTipoOrigen"],
 					   "situacion_contable" => $_POST["editarSituacionContable"],
 					   "ubicacion_fisica" => $_POST["editarUbicacionFisica"],
 					   "responsable" => $_POST["editarResponsable"],
@@ -485,4 +547,3 @@ class ControladorActivos{
 
 
 }
-

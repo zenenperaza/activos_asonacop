@@ -208,9 +208,6 @@ $(document).on("click", ".btnEliminarEmpleado", function(){
     //idEmpleado="'.$value["id"].'" fotoEmpleado="'.$value["foto"].'" cedula="'.$value["cedula"].'"
 
   var idEmpleado = $(this).attr("idEmpleado");
-  var fotoEmpleado = $(this).attr("fotoEmpleado");
-  var cedula = $(this).attr("cedula");
-
   swal({
     title: '¿Está seguro de borrar el empleado?',
     text: "¡Si no lo está puede cancelar la accíón!",
@@ -224,7 +221,7 @@ $(document).on("click", ".btnEliminarEmpleado", function(){
 
     if(result.value){
 
-      window.location = "index.php?ruta=empleados&idEmpleado="+idEmpleado+"&cedula="+cedula+"&fotoEmpleado="+fotoEmpleado;
+      window.location = "index.php?ruta=empleados&idEmpleado="+encodeURIComponent(idEmpleado);
 
     }
 

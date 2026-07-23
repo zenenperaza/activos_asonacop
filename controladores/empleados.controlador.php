@@ -416,22 +416,13 @@ class ControladorEmpleados{
 		if(isset($_GET["idEmpleado"])){
 
 			$tabla ="empleados";
-			$datos = $_GET["idEmpleado"];
-
-			if($_GET["fotoEmpleado"] != ""  && $_GET["fotoEmpleado"] != "vistas/img/empleados/default/anonymous.png"){
-
-				unlink($_GET["fotoEmpleado"]);
-				rmdir('vistas/img/Empleados/'.$_GET["empleado"]);
-
-			}
+			$datos = (int) $_GET["idEmpleado"];
       
       /*=============================================
       AUDITORIA
       =============================================*/
-      $tablaAuditoria = "empleados";
       $itemAuditoria = "id";
-      $valorAuditoria = $_GET["idCategoria"];
-      $respuestaAuditoria = ModeloEmpleados::MdlMostrarEmpleados($tablaAuditoria, $itemAuditoria, $valorAuditoria);
+      $respuestaAuditoria = ModeloEmpleados::mdlMostrarEmpleados($tabla, $itemAuditoria, $datos);
       /*=============================================
       AUDITORIA FIN
       =============================================*/ 
@@ -450,7 +441,7 @@ class ControladorEmpleados{
       
 
       $usuario = $_SESSION["usuario"];  
-      $accion = "Borrar Empleado - ".$respuestaAuditoria['nombre']." - ".$respuestaAuditoria['apellido']." - ".$respuestaAuditoria['email'];         
+      $accion = "Borrar Empleado - ".$respuestaAuditoria['nombre']." - ".$respuestaAuditoria['email']." - ".$respuestaAuditoria['cargo'];
       $crearAuditoria = ControladorAuditorias::ctrIngresarAuditorias($usuario, $accion);
       /*=============================================
       AUDITORIA FIN
@@ -473,6 +464,25 @@ class ControladorEmpleados{
 
 				</script>';
 
+			}else{
+
+				echo'<script>
+
+				swal({
+					  type: "error",
+					  title: "No se pudo borrar el empleado",
+					  showConfirmButton: true,
+					  confirmButtonText: "Cerrar"
+					  }).then(function(result){
+							if (result.value) {
+
+							window.location = "empleados";
+
+							}
+						})
+
+				</script>';
+
 			}		
     
 
@@ -480,5 +490,4 @@ class ControladorEmpleados{
 }
 }
 	
-
 

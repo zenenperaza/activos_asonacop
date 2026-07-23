@@ -18,6 +18,32 @@
 
 		<?php
 
+		 if($_SESSION["perfil"] == "Administrador"  || $_SESSION["perfil"] == "Usuario" ){
+
+			echo '<li>
+
+				<a href="activos">
+
+					<i class="fa fa-product-hunt"></i>
+					<span>Activos</span>
+
+				</a>
+
+			</li> 
+            ';
+            } else {
+            echo '<li>
+
+				<a href="#"  data-toggle="modal" data-target="#sinAcceso">
+
+					<i class="fa fa-product-hunt"></i>
+					<span>Activos</span>
+
+				</a>
+
+			</li> ';
+        }
+
 		if($_SESSION["perfil"] == "Administrador"  || $_SESSION["perfil"] == "Usuario"){
 
 			echo '
@@ -82,31 +108,7 @@
 
 			</li>';
         }
-            if($_SESSION["perfil"] == "Administrador"  || $_SESSION["perfil"] == "Usuario" ){
-
-			echo '<li>
-
-				<a href="activos">
-
-					<i class="fa fa-product-hunt"></i>
-					<span>Activos</span>
-
-				</a>
-
-			</li> 
-            ';
-            } else {
-            echo '<li>
-
-				<a href="#"  data-toggle="modal" data-target="#sinAcceso">
-
-					<i class="fa fa-product-hunt"></i>
-					<span>Activos</span>
-
-				</a>
-
-			</li> ';
-        }
+           
            if($_SESSION["perfil"] == "Administrador"  || $_SESSION["perfil"] == "Usuario" ){
 
 			echo '<li class="treeview">

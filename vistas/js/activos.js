@@ -2,10 +2,84 @@
 CARGAR LA TABLA DINÁMICA DE Activos
 =============================================*/
 
+var filtroOficina = $('.tablaActivos').attr('data-filtro-oficina') || '';
+
+var titulosCamposActivo = {
+	nuevaCategoria: 'Categoría',
+	nuevoUbicacionFisica: 'Estado / Oficina',
+	nuevoCodigoUF: 'Prefijo de ubicación',
+	nuevoCodigo: 'Código del activo',
+	nuevaDescripcion: 'Descripción',
+	nuevoSerialNumero: 'Número serial',
+	nuevaFechaAdquisicion: 'Fecha de adquisición',
+	nuevaFuenteFinanciamiento: 'Fuente de financiamiento',
+	nuevoOrigen: 'Origen del activo',
+	nuevoSituacionContable: 'Situación contable',
+	nuevoResponsable: 'Responsable',
+	nuevaFechaEntregaResponsable: 'Fecha de entrega',
+	nuevoEstadoConservacion: 'Estado de conservación',
+	nuevaGarantia: 'Información de garantía',
+	nuevaObservaciones: 'Observaciones',
+	nuevoStock: 'Stock',
+	nuevoPrecioCompraBs: 'Precio de compra Bs.',
+	nuevoPrecioCompraDs: 'Precio de compra $',
+	editarCategoria: 'Categoría',
+	editarUbicacionFisica: 'Estado / Oficina',
+	editarCodigoUF: 'Prefijo de ubicación',
+	editarCodigo: 'Código del activo',
+	editarDescripcion: 'Descripción',
+	editarSerialNumero: 'Número serial',
+	editarFechaAdquisicion: 'Fecha de adquisición',
+	editarFuenteFinanciamiento: 'Fuente de financiamiento',
+	editarOrigen: 'Origen del activo',
+	editarSituacionContable: 'Situación contable',
+	editarResponsable: 'Responsable',
+	editarFechaEntregaResponsable: 'Fecha de entrega',
+	editarEstadoConservacion: 'Estado de conservación',
+	editarGarantia: 'Información de garantía',
+	editarObservaciones: 'Observaciones',
+	editarStock: 'Stock',
+	editarPrecioCompraBs: 'Precio de compra Bs.',
+	editarPrecioCompraDs: 'Precio de compra $'
+};
+
+$.each(titulosCamposActivo, function(nombre, titulo){
+	var campo = $('[name="' + nombre + '"]');
+
+	campo.each(function(){
+		var control = $(this);
+		var grupo = control.closest('.input-group');
+
+		if(grupo.length && !grupo.prev().hasClass('campo-activo-label')){
+			$('<label class="campo-activo-label"></label>')
+				.text(titulo)
+				.insertBefore(grupo);
+		}
+
+		control.attr('aria-label', titulo);
+	});
+});
+
+$('.selector-fecha-activo').datepicker({
+	format: 'dd/mm/yyyy',
+	language: 'es',
+	autoclose: true,
+	todayHighlight: true,
+	todayBtn: 'linked',
+	clearBtn: true,
+	orientation: 'bottom auto'
+});
+
+$('.selector-fecha-activo input').inputmask('dd/mm/yyyy', {
+	placeholder: 'dd/mm/aaaa',
+	showMaskOnHover: false
+});
+
 $('.tablaActivos').DataTable( {
       "bDestroy": true,
     "iDisplayLength": 50,//Paginación
       "order": [[ 0, "desc" ]],//Ordenar (columna,orden)   
+      "serverSide": true,
       dom: 'Bfrtip',
        
      buttons: [
@@ -14,10 +88,17 @@ $('.tablaActivos').DataTable( {
 		'csvHtml5',
 		'pdf'
     ],
-    "ajax": "ajax/datatable-activos.ajax.php",
+    "ajax": {
+      "url": "ajax/datatable-activos.ajax.php",
+      "type": "GET",
+      "data": function (datos) {
+        datos.oficina = filtroOficina;
+      }
+    },
     "deferRender": true, 
 	"retrieve": true,
 	"processing": true,
+	"searchDelay": 400,
 	 "language": {
 
 			"sProcessing":     "Procesando...",
@@ -93,7 +174,10 @@ CAPTURANDO LA UBICACION FISICA PARA ASIGNAR CÓDIGO
 $("#nuevoUbicacionFisica").change(function(){
     var ubicacionFisica = $(this).val().substr(0,3);
     $("#nuevoCodigoUF").val(ubicacionFisica);
-      
+
+    if($("#nuevoCodigo").val() === "NaN"){
+		$("#nuevoCodigo").val("");
+    }
 
 })
 
@@ -126,15 +210,26 @@ $("#nuevaCategoria").change(function(){
       dataType:"json",
       success:function(respuesta){
 
+		var codigoActual = $.trim($("#nuevoCodigo").val());
+
+		if(codigoActual === "NaN"){
+			$("#nuevoCodigo").val("");
+			codigoActual = "";
+		}
+
       	if(!respuesta){
 
       		var nuevoCodigo = idCategoria+"01";
-      		$("#nuevoCodigo").val(nuevoCodigo);
+			if(!codigoActual){
+				$("#nuevoCodigo").val(nuevoCodigo);
+			}
 
       	}else{
 
-      		var nuevoCodigo = Number(respuesta["codigo"]) + 1;
-          	$("#nuevoCodigo").val(nuevoCodigo);
+			var codigoAnterior = parseInt(respuesta["codigo"], 10);
+			if(!codigoActual && !isNaN(codigoAnterior)){
+				$("#nuevoCodigo").val(codigoAnterior + 1);
+			}
 
       	}
                 
@@ -143,6 +238,12 @@ $("#nuevaCategoria").change(function(){
   	})
 
 })
+
+$("#modalAgregarActivo").on("show.bs.modal", function(){
+	if($("#nuevoCodigo").val() === "NaN"){
+		$("#nuevoCodigo").val("");
+	}
+});
 
 
 
@@ -274,10 +375,13 @@ $(".tablaActivos tbody").on("click", "button.btnEditarActivo", function(){
            $("#editarCodigo").val(respuesta["codigo"]);
 
            $("#editarCodigoUF").val(respuesta["codigo_uf"]);
+           $("#editarIdActivo").val(respuesta["id"]);
 
            $("#editarDescripcion").val(respuesta["descripcion"]);
           
-           $("#editarFechaAdquisicion").val(respuesta["fecha_adquisicion"]);
+           $("#editarFechaAdquisicion")
+             .closest(".selector-fecha-activo")
+             .datepicker("update", respuesta["fecha_adquisicion"]);
           
            $("#editarFuenteFinanciamiento").val(respuesta["fuente_financiamiento"]);
           
@@ -293,7 +397,9 @@ $(".tablaActivos tbody").on("click", "button.btnEditarActivo", function(){
            $("#editarUbicacionFisica").html(respuesta["ubicacion_fisica"]);          
              
           
-           $("#editarFechaEntregaResponsable").val(respuesta["fecha_entrega_res"]);
+           $("#editarFechaEntregaResponsable")
+             .closest(".selector-fecha-activo")
+             .datepicker("update", respuesta["fecha_entrega_res"]);
           
            $("#editarEstadoConservacion").val(respuesta["estado_conservacion"]);
            $("#editarEstadoConservacion").html(respuesta["estado_conservacion"]);
