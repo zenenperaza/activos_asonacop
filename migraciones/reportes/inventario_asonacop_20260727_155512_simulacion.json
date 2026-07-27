@@ -1,0 +1,12 @@
+{
+    "modo": "simulacion",
+    "archivo": "D:\\Users\\peraz\\Downloads\\INVENTARIO ASONACOP LEVANTADO.xlsx",
+    "filas_excel": 261,
+    "preparados": 261,
+    "insertados": 0,
+    "omitidos_existentes": 0,
+    "errores": [],
+    "categorias_creadas": [],
+    "responsables_vinculados": 89,
+    "responsables_sin_vincular": 172
+}
