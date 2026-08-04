@@ -1,0 +1,17 @@
+{
+    "modo": "simulacion",
+    "archivo": "D:\\Users\\peraz\\Downloads\\INV ZULIA.xlsx",
+    "filas_con_datos": 31,
+    "preparados": 30,
+    "insertados": 0,
+    "omitidos_existentes": 0,
+    "filas_omitidas": [
+        {
+            "fila": 18,
+            "codigo": "016-01",
+            "motivo": "Descripción vacía"
+        }
+    ],
+    "errores": [],
+    "categorias_creadas": []
+}

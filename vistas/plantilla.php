@@ -213,7 +213,7 @@
 <script src="vistas/js/plantilla.js?v=2"></script>
 <script src="vistas/js/usuarios.js?v=2"></script>
 <script src="vistas/js/categorias.js?v=2"></script>
-<script src="vistas/js/activos.js?v=3"></script>
+<script src="vistas/js/activos.js?v=4"></script>
 <script src="vistas/js/empleados.js?v=2"></script>
 <script src="vistas/js/asignaciones.js?v=2"></script>
 <script src="vistas/js/reportes.js?v=2"></script>    
