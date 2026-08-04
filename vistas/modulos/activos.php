@@ -437,13 +437,9 @@ MODAL AGREGAR ACTIVO
                   
                   <option value="">Selecionar estado de conservación</option>
 
-                  <option value="Excelente">Excelente</option>
+                  <option value="Operativo">Operativo</option>
 
-                  <option value="Bueno">Bueno</option>
-
-                  <option value="Regular">Regular</option>
-
-                  <option value="Malo">Malo</option>
+                  <option value="Inoperativo">Inoperativo</option>
 
                 </select>
 
@@ -612,10 +608,22 @@ MODAL EDITAR ACTIVO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" name="editarCategoria" readonly required>
-                  
-                  <option id="editarCategoria"></option>             
-                        
+                <select class="form-control input-lg" id="editarCategoria" name="editarCategoria" required>
+
+                  <option value="">Seleccionar categoría</option>
+
+                  <?php
+
+                  $itemCategoriaEditar = null;
+                  $valorCategoriaEditar = null;
+                  $categoriasEditar = ControladorCategorias::ctrMostrarCategorias($itemCategoriaEditar, $valorCategoriaEditar);
+
+                  foreach($categoriasEditar as $categoriaEditar){
+                    echo '<option value="'.(int)$categoriaEditar["id"].'">'.htmlspecialchars($categoriaEditar["categoria"], ENT_QUOTES, 'UTF-8').'</option>';
+                  }
+
+                  ?>
+
                 </select>
 
               </div>
@@ -893,13 +901,9 @@ MODAL EDITAR ACTIVO
                   
                   <option id="editarEstadoConservacion"></option>
 
-                  <option value="Excelente">Excelente</option>
+                  <option value="Operativo">Operativo</option>
 
-                  <option value="Bueno">Bueno</option>
-
-                  <option value="Regular">Regular</option>
-
-                  <option value="Malo">Malo</option>
+                  <option value="Inoperativo">Inoperativo</option>
 
 
                 </select>

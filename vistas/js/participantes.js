@@ -202,6 +202,13 @@ EDITAR ACTIVO
 
 $(".tablaActivos tbody").on("click", "button.btnEditarActivo", function(){
 
+	// Este bloque pertenece a un formulario antiguo de participantes.
+	// No debe ejecutarse en la página actual de activos porque elimina
+	// las opciones de los selectores del modal de edición.
+	if(!$("#modalEditarParticipante").length){
+		return;
+	}
+
 	var idActivo = $(this).attr("idActivo");
 	
 	var datos = new FormData();

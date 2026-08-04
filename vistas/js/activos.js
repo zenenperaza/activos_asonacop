@@ -346,26 +346,7 @@ $(".tablaActivos tbody").on("click", "button.btnEditarActivo", function(){
 
           })
           
-          var datosCategoria = new FormData();
-          datosCategoria.append("idCategoria",respuesta["id_categoria"]);
-
-           $.ajax({
-
-              url:"ajax/categorias.ajax.php",
-              method: "POST",
-              data: datosCategoria,
-              cache: false,
-              contentType: false,
-              processData: false,
-              dataType:"json",
-              success:function(respuesta){
-                  
-                  $("#editarCategoria").val(respuesta["id"]);
-                  $("#editarCategoria").html(respuesta["categoria"]);
-
-              }
-
-          })
+          $("#editarCategoria").val(respuesta["id_categoria"]);
 
        
 

@@ -90,7 +90,7 @@
 				<a href="empleados">
 
 					<i class="fa fa-users"></i>
-					<span>Empleados</span>
+					<span>Honorarios Prof.</span>
 
 				</a>
 
@@ -102,7 +102,7 @@
 				<a href="#"  data-toggle="modal" data-target="#sinAcceso">
 
 					<i class="fa fa-users"></i>
-					<span>Empleados</span>
+					<span>Honorarios Prof.</span>
 
 				</a>
 

@@ -29,7 +29,7 @@ if($_SESSION["perfil"] == "Especial"){
     
     <h1>
       
-      Administrar empleados
+      Administrar Honorarios Prof.
     
     </h1>
 
@@ -37,7 +37,7 @@ if($_SESSION["perfil"] == "Especial"){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar empleados</li>
+      <li class="active">Administrar Honorarios Prof.</li>
     
     </ol>
 
