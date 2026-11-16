@@ -56,6 +56,10 @@ if($_SESSION["perfil"] == "Especial"){
 
         </button>
 
+        <button type="button" class="btn btn-success" id="exportarExcelActivos">
+          <i class="fa fa-file-excel-o" aria-hidden="true"></i> Exportar Excel
+        </button>
+
       </div>
 
       <div class="box-body">

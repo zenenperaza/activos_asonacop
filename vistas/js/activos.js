@@ -4,6 +4,49 @@ CARGAR LA TABLA DINÁMICA DE Activos
 
 var filtroOficina = $('.tablaActivos').attr('data-filtro-oficina') || '';
 
+$('#exportarExcelActivos').on('click', function(){
+	var boton = $(this);
+	var tabla = $('.tablaActivos').DataTable();
+	var parametros = $.extend(true, {}, tabla.ajax.params(), {exportar: 'excel'});
+	boton.prop('disabled', true).text('Exportando...');
+	$.getJSON('ajax/datatable-activos.ajax.php', parametros).done(function(respuesta){
+		var auxiliar;
+		var contenedorExportacion;
+		try {
+			var columnas = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+			var titulos = columnas.map(function(indice){
+				return {title: $(tabla.column(indice).header()).text()};
+			});
+			var filas = respuesta.data.map(function(fila){
+				return columnas.map(function(indice){
+					return indice === 10 ? $('<div>').html(fila[indice]).text() : String(fila[indice] == null ? '' : fila[indice]);
+				});
+			});
+			contenedorExportacion = $('<div>').hide().appendTo('body');
+			auxiliar = $('<table>').appendTo(contenedorExportacion);
+			var exportacion = auxiliar.DataTable({
+				data: filas, columns: titulos, paging: false, ordering: false,
+				dom: 'B', buttons: [{extend: 'excelHtml5', title: 'Activos', filename: 'Activos',
+					exportOptions: {stripHtml: false, decodeEntities: false}}]
+			});
+			exportacion.button(0).trigger();
+		} catch(error) {
+			swal('Error', 'No se pudo generar el archivo Excel.', 'error');
+		} finally {
+			if(auxiliar && $.fn.dataTable.isDataTable(auxiliar[0])){
+				auxiliar.DataTable().destroy();
+			}
+			if(contenedorExportacion){
+				contenedorExportacion.remove();
+			}
+		}
+	}).fail(function(){
+		swal('Error', 'No se pudieron exportar los activos. Intente nuevamente.', 'error');
+	}).always(function(){
+		boton.prop('disabled', false).html('<i class="fa fa-file-excel-o" aria-hidden="true"></i> Exportar Excel');
+	});
+});
+
 var titulosCamposActivo = {
 	nuevaCategoria: 'Categoría',
 	nuevoUbicacionFisica: 'Estado / Oficina',

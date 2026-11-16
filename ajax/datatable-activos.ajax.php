@@ -4,6 +4,17 @@ require_once __DIR__."/../modelos/conexion.php";
 
 header("Content-Type: application/json; charset=utf-8");
 
+$exportar = isset($_GET['exportar']) && $_GET['exportar'] === 'excel';
+if($exportar){
+	session_start();
+	if(empty($_SESSION['iniciarSesion']) || $_SESSION['iniciarSesion'] !== 'ok' || $_SESSION['perfil'] === 'Especial'){
+		http_response_code(403);
+		echo json_encode(array('error' => 'Acceso no autorizado.'));
+		exit;
+	}
+	session_write_close();
+}
+
 $draw = isset($_GET["draw"]) ? (int) $_GET["draw"] : 0;
 $inicio = isset($_GET["start"]) ? max(0, (int) $_GET["start"]) : 0;
 $cantidad = isset($_GET["length"]) ? (int) $_GET["length"] : 50;
@@ -88,7 +99,7 @@ try{
 		 .$desde
 		 .$donde
 		 ." ORDER BY ".$columnaOrden." ".$direccionOrden
-		 ." LIMIT ".$inicio.", ".$cantidad;
+		 .($exportar ? "" : " LIMIT ".$inicio.", ".$cantidad);
 
 	$stmt = $conexion->prepare($sql);
 	$stmt->execute($parametros);
