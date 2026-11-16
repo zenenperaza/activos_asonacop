@@ -31,7 +31,7 @@ class Conexion{
 
 	static public function conectar(){
 
-		$link = new PDO("mysql:host=localhost;dbname=asonacopcom_system",
+		$link = new PDO("mysql:host=localhost;dbname=asonacop_system",
 			            "root",
 			            "");
 
@@ -41,22 +41,23 @@ class Conexion{
 
 	}
 
+}
 
 
+/*
+Class Conexion{
 
+	static public function conectar(){
 
-// Class Conexion{
+		$link = new PDO("mysql:host=localhost;dbname=asonacopcom_system",
+			            "asonacopcom_zenen",
+			            "3317397Jb..");
 
-// 	static public function conectar(){
+		$link->exec("set names utf8");
 
-// 		$link = new PDO("mysql:host=localhost;dbname=asonacopcom_system",
-// 			            "asonacopcom_zenen",
-// 			            "3317397Jb..");
+		return $link;
 
-// 		$link->exec("set names utf8");
-
-// 		return $link;
-
-// 	}
+	}
 
 }
+	*/

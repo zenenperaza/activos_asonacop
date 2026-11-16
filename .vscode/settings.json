@@ -1,8 +1,0 @@
-{
-    "chat.tools.terminal.autoApprove": {
-        "/^php -l controladores\\\\activos\\.controlador\\.php$/": {
-            "approve": true,
-            "matchCommandLine": true
-        }
-    }
-}
